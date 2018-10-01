@@ -1,0 +1,15 @@
+<%= form_for @location do |f| %>
+
+  <div><%= f.label :name %>
+  <%= f.text_field :name %></div>
+  <div><%= f.label :address %>
+  <%= f.text_field :address %></div>
+  <div><%= f.label :email %>
+  <%= f.text_field :email %></div>
+  <div><%= f.label :opening_time %>
+  <%= f.time_field :opening_time %></div>
+  <div><%= f.label :closing_time %>
+  <%= f.time_field :closing_time %></div>
+  <%= f.submit "Submit" %>
+
+<% end %>
