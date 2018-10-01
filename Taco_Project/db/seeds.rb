@@ -41,41 +41,44 @@ ingredients.each {|ingredient| Ingredient.create(ingredient)}
 locations = [
   {address: "dupont circle",
   phone_number: 5555739283,
-  email: "dupont@tacos.com"},
+  email: "dupont@tacos.com",
+  name: "Dupont Circle"},
   {address: "southwest",
   phone_number: 5559874273,
-  email: "southwest@tacos.com"},
+  email: "southwest@tacos.com",
+  name: "Southwest Location"},
   {address: "metro center",
   phone_number: 5557388372,
-  email: "metrocenter@tacos.com"}
+  email: "metrocenter@tacos.com",
+  name: "Metro Center"}
 ]
 
 locations.each {|location| Location.create(location)}
 
 users = [
   {name: "Patti",
-    username: "pattipig",
-    password: "Pattipassword1",
+    username: "patti",
+    password_digest: "Pattipassword1",
     email: "patti@gmail.com",
     address: "somewhere in dc",
     phone_number: 5555379372,
-    location_id: Location.find_by(address: "southwest"),
+    location_id: Location.find_by(address: "southwest").id,
     taco_points: 0},
   {name: "Sam",
     username: "samtheham",
-    password: "Sampassword1",
+    password_digest: "Sampassword1",
     email: "sam@gmail.com",
     address: "somewhere in virginia",
     phone_number: 5552342986,
-    location_id: Location.find_by(address: "metro center"),
+    location_id: Location.find_by(address: "metro center").id,
     taco_points: 0},
   {name: "Barack",
     username: "baracktherock",
-    password: "president1al",
+    password_digest: "president1al",
     email: "bobama@whitehouse.gov",
     address: "somewhere in dc",
     phone_number: 5558783729,
-    location_id: Location.find_by(address: "dupont circle"),
+    location_id: Location.find_by(address: "dupont circle").id,
     taco_points: 0},
 ]
 

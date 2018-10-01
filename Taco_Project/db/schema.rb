@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_01_143725) do
+ActiveRecord::Schema.define(version: 2018_10_01_203804) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2018_10_01_143725) do
     t.datetime "closing_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
   end
 
   create_table "taco_ingredients", force: :cascade do |t|
@@ -69,7 +70,6 @@ ActiveRecord::Schema.define(version: 2018_10_01_143725) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "username"
-    t.string "password"
     t.string "email"
     t.string "address"
     t.integer "phone_number"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 2018_10_01_143725) do
     t.integer "taco_points"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
 end
