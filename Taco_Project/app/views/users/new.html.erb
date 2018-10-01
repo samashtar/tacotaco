@@ -19,7 +19,7 @@
   <%= f.number_field :phone_number %></div>
 
   <div><%= f.label :location_id %>
-  <%= f.collection_select :location_id, @locations, :id, :address %></div>
+  <%= f.collection_select :location_id, @locations, :id, :name %></div>
 
   <%= f.submit "Submit" %>
 

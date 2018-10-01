@@ -41,20 +41,23 @@ ingredients.each {|ingredient| Ingredient.create(ingredient)}
 locations = [
   {address: "dupont circle",
   phone_number: 5555739283,
-  email: "dupont@tacos.com"},
+  email: "dupont@tacos.com",
+  name: "Dupont Circle"},
   {address: "southwest",
   phone_number: 5559874273,
-  email: "southwest@tacos.com"},
+  email: "southwest@tacos.com",
+  name: "Southwest Location"},
   {address: "metro center",
   phone_number: 5557388372,
-  email: "metrocenter@tacos.com"}
+  email: "metrocenter@tacos.com",
+  name: "Metro Center"}
 ]
 
 locations.each {|location| Location.create(location)}
 
 users = [
   {name: "Patti",
-    username: "pattipig",
+    username: "patti",
     password: "Pattipassword1",
     email: "patti@gmail.com",
     address: "somewhere in dc",
