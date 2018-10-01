@@ -88,3 +88,2096 @@ Migrating to CreateTacoIngredients (20181001143725)
   ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mIngredient Load (0.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:2
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:3
+  [1m[36mTaco Load (0.4ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos"[0m
+  ↳ db/seeds.rb:4
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Create (2.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "protein"], ["created_at", "2018-10-01 16:54:47.897117"], ["updated_at", "2018-10-01 16:54:47.897117"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "topping"], ["created_at", "2018-10-01 16:54:47.902127"], ["updated_at", "2018-10-01 16:54:47.902127"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "tortilla"], ["created_at", "2018-10-01 16:54:47.905472"], ["updated_at", "2018-10-01 16:54:47.905472"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sauce"], ["created_at", "2018-10-01 16:54:47.908918"], ["updated_at", "2018-10-01 16:54:47.908918"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "bean"], ["created_at", "2018-10-01 16:54:47.926532"], ["updated_at", "2018-10-01 16:54:47.926532"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "topping"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "topping"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "topping"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "protein"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "protein"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "protein"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "tortilla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "tortilla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "tortilla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "tortilla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sauce"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sauce"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sauce"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "bean"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "bean"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "lettuce"], ["price", 0], ["calories", 0], ["category_id", 2], ["created_at", "2018-10-01 16:54:47.961691"], ["updated_at", "2018-10-01 16:54:47.961691"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "cheese"], ["price", 0], ["calories", 0], ["category_id", 2], ["created_at", "2018-10-01 16:54:47.966618"], ["updated_at", "2018-10-01 16:54:47.966618"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tomato"], ["price", 0], ["calories", 0], ["category_id", 2], ["created_at", "2018-10-01 16:54:47.970285"], ["updated_at", "2018-10-01 16:54:47.970285"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "beef"], ["price", 0], ["calories", 0], ["category_id", 1], ["created_at", "2018-10-01 16:54:47.974160"], ["updated_at", "2018-10-01 16:54:47.974160"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "chicken"], ["price", 0], ["calories", 0], ["category_id", 1], ["created_at", "2018-10-01 16:54:47.978078"], ["updated_at", "2018-10-01 16:54:47.978078"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tofu"], ["price", 0], ["calories", 0], ["category_id", 1], ["created_at", "2018-10-01 16:54:47.982076"], ["updated_at", "2018-10-01 16:54:47.982076"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "multigrain"], ["price", 0], ["calories", 0], ["category_id", 3], ["created_at", "2018-10-01 16:54:47.986876"], ["updated_at", "2018-10-01 16:54:47.986876"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "white"], ["price", 0], ["calories", 0], ["category_id", 3], ["created_at", "2018-10-01 16:54:47.990811"], ["updated_at", "2018-10-01 16:54:47.990811"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "corn"], ["price", 0], ["calories", 0], ["category_id", 3], ["created_at", "2018-10-01 16:54:47.994846"], ["updated_at", "2018-10-01 16:54:47.994846"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "gluten free"], ["price", 0], ["calories", 0], ["category_id", 3], ["created_at", "2018-10-01 16:54:47.999716"], ["updated_at", "2018-10-01 16:54:47.999716"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "mild"], ["price", 0], ["calories", 0], ["category_id", 4], ["created_at", "2018-10-01 16:54:48.003726"], ["updated_at", "2018-10-01 16:54:48.003726"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "medium"], ["price", 0], ["calories", 0], ["category_id", 4], ["created_at", "2018-10-01 16:54:48.007501"], ["updated_at", "2018-10-01 16:54:48.007501"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "hot"], ["price", 0], ["calories", 0], ["category_id", 4], ["created_at", "2018-10-01 16:54:48.017159"], ["updated_at", "2018-10-01 16:54:48.017159"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "black"], ["price", 0], ["calories", 0], ["category_id", 5], ["created_at", "2018-10-01 16:54:48.022218"], ["updated_at", "2018-10-01 16:54:48.022218"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "pinto"], ["price", 0], ["calories", 0], ["category_id", 5], ["created_at", "2018-10-01 16:54:48.026684"], ["updated_at", "2018-10-01 16:54:48.026684"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mLocation Create (0.6ms)[0m  [1m[32mINSERT INTO "locations" ("address", "phone_number", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["address", "dupont circle"], ["phone_number", 5555739283], ["email", "dupont@tacos.com"], ["created_at", "2018-10-01 16:54:48.040088"], ["updated_at", "2018-10-01 16:54:48.040088"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mLocation Create (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("address", "phone_number", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["address", "southwest"], ["phone_number", 5559874273], ["email", "southwest@tacos.com"], ["created_at", "2018-10-01 16:54:48.043808"], ["updated_at", "2018-10-01 16:54:48.043808"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mLocation Create (0.6ms)[0m  [1m[32mINSERT INTO "locations" ("address", "phone_number", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["address", "metro center"], ["phone_number", 5557388372], ["email", "metrocenter@tacos.com"], ["created_at", "2018-10-01 16:54:48.047374"], ["updated_at", "2018-10-01 16:54:48.047374"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "email", "address", "phone_number", "location_id", "taco_points", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Patti"], ["username", "pattipig"], ["password", "Pattipassword1"], ["email", "patti@gmail.com"], ["address", "somewhere in dc"], ["phone_number", 5555379372], ["location_id", 2], ["taco_points", 0], ["created_at", "2018-10-01 16:54:48.099846"], ["updated_at", "2018-10-01 16:54:48.099846"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (22.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "email", "address", "phone_number", "location_id", "taco_points", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sam"], ["username", "samtheham"], ["password", "Sampassword1"], ["email", "sam@gmail.com"], ["address", "somewhere in virginia"], ["phone_number", 5552342986], ["location_id", 3], ["taco_points", 0], ["created_at", "2018-10-01 16:54:48.135046"], ["updated_at", "2018-10-01 16:54:48.135046"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "email", "address", "phone_number", "location_id", "taco_points", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Barack"], ["username", "baracktherock"], ["password", "president1al"], ["email", "bobama@whitehouse.gov"], ["address", "somewhere in dc"], ["phone_number", 5558783729], ["location_id", 1], ["taco_points", 0], ["created_at", "2018-10-01 16:54:48.152557"], ["updated_at", "2018-10-01 16:54:48.152557"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:85
+  [1m[36mTaco Create (0.6ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Taco 'bout it'"], ["created_at", "2018-10-01 16:54:48.165782"], ["updated_at", "2018-10-01 16:54:48.165782"]]
+  ↳ db/seeds.rb:85
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mTaco Create (0.3ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Lost in the Sauce"], ["created_at", "2018-10-01 16:54:48.169944"], ["updated_at", "2018-10-01 16:54:48.169944"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:87
+  [1m[36mTaco Create (0.4ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Beanormous"], ["created_at", "2018-10-01 16:54:48.172835"], ["updated_at", "2018-10-01 16:54:48.172835"]]
+  ↳ db/seeds.rb:87
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:87
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:88
+  [1m[36mTaco Create (0.5ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Cheese Louise"], ["created_at", "2018-10-01 16:54:48.175878"], ["updated_at", "2018-10-01 16:54:48.175878"]]
+  ↳ db/seeds.rb:88
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:88
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:89
+  [1m[36mTaco Create (0.3ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Macho Taco"], ["created_at", "2018-10-01 16:54:48.179923"], ["updated_at", "2018-10-01 16:54:48.179923"]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "cheese"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:91
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "chicken"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "black"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:93
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "tomato"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:94
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTaco Load (0.6ms)[0m  [1m[34mSELECT  "tacos".* FROM "tacos" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" ORDER BY "ingredients"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" ORDER BY "ingredients"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTaco Load (0.1ms)[0m  [1m[34mSELECT  "tacos".* FROM "tacos" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTaco Load (0.2ms)[0m  [1m[34mSELECT  "tacos".* FROM "tacos" WHERE "tacos"."name" = ? LIMIT ?[0m  [["name", "Lost in the Saunce"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTaco Load (0.1ms)[0m  [1m[34mSELECT  "tacos".* FROM "tacos" WHERE "tacos"."name" = ? LIMIT ?[0m  [["name", "Lost in the Sauce"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTaco Load (0.1ms)[0m  [1m[34mSELECT  "tacos".* FROM "tacos" WHERE "tacos"."name" = ? LIMIT ?[0m  [["name", "Lost in the Sauce"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTaco Load (0.1ms)[0m  [1m[34mSELECT  "tacos".* FROM "tacos" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTaco Load (0.3ms)[0m  [1m[34mSELECT  "tacos".* FROM "tacos" ORDER BY "tacos"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTaco Load (0.1ms)[0m  [1m[34mSELECT  "tacos".* FROM "tacos" ORDER BY "tacos"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mIngredient Load (0.6ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" INNER JOIN "taco_ingredients" ON "ingredients"."id" = "taco_ingredients"."ingredient_id" WHERE "taco_ingredients"."taco_id" = ? LIMIT ?[0m  [["taco_id", 1], ["LIMIT", 11]]
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTaco Load (0.2ms)[0m  [1m[34mSELECT  "tacos".* FROM "tacos" INNER JOIN "user_tacos" ON "tacos"."id" = "user_tacos"."taco_id" WHERE "user_tacos"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mTaco Load (0.2ms)[0m  [1m[34mSELECT  "tacos".* FROM "tacos" ORDER BY "tacos"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTaco Load (0.2ms)[0m  [1m[34mSELECT  "tacos".* FROM "tacos" ORDER BY "tacos"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUserTaco Create (0.6ms)[0m  [1m[32mINSERT INTO "user_tacos" ("user_id", "taco_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["taco_id", 1], ["created_at", "2018-10-01 17:01:35.848187"], ["updated_at", "2018-10-01 17:01:35.848187"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTaco Load (0.2ms)[0m  [1m[34mSELECT  "tacos".* FROM "tacos" INNER JOIN "user_tacos" ON "tacos"."id" = "user_tacos"."taco_id" WHERE "user_tacos"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mTaco Load (0.1ms)[0m  [1m[34mSELECT  "tacos".* FROM "tacos" INNER JOIN "user_tacos" ON "tacos"."id" = "user_tacos"."taco_id" WHERE "user_tacos"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mTaco Load (0.3ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" INNER JOIN "user_tacos" ON "tacos"."id" = "user_tacos"."taco_id" WHERE "user_tacos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" INNER JOIN "taco_ingredients" ON "ingredients"."id" = "taco_ingredients"."ingredient_id" WHERE "taco_ingredients"."taco_id" = ? LIMIT ?[0m  [["taco_id", 1], ["LIMIT", 11]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" INNER JOIN "taco_ingredients" ON "ingredients"."id" = "taco_ingredients"."ingredient_id" WHERE "taco_ingredients"."taco_id" = ? LIMIT ?[0m  [["taco_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-10-01 13:22:58 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/samashtar/.rvm/gems/ruby-2.3.3/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/samashtar/.rvm/gems/ruby-2.3.3/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (7.9ms)
+Completed 200 OK in 56ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2018-10-01 13:23:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:23:28 -0400
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  Rendered tacos/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1165ms (Views: 1144.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:25:57 -0400
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 104ms (Views: 83.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:26:25 -0400
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 64ms (Views: 59.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:26:54 -0400
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:6
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:7
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:8
+  Rendered tacos/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 76ms (Views: 69.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 13:27:04 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1viaZcQePQIbS9MEzubEcRffkwkOrjN+5Wl+JPvbLMWyOl2MhOOza92b1yftWjPCV85pb26wLvCSEchx/gu5zw==", "ingredient"=>{"ingredient_id"=>"3"}, "commit"=>"Create Taco"}
+No template found for TacosController#create, rendering head :no_content
+Completed 204 No Content in 129ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:29:26 -0400
+  
+SyntaxError (/Users/samashtar/Development/code/Mod2/tacotaco/Taco_Project/app/controllers/tacos_controller.rb:47: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/tacos_controller.rb:47: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:29:32 -0400
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 75ms (Views: 59.9ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 13:29:36 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HazavDeZ1XHx4z15J1v7BhTFSeWd5c+fyz0Vh9a6ST55bh1Vd2RbGDczOVoE5wy1VNSzg/370hG8RaPS02rcNA==", "ingredient"=>{"ingredient_id"=>"7"}, "commit"=>"Create Taco"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: taco):
+  
+app/controllers/tacos_controller.rb:38:in `taco_params'
+app/controllers/tacos_controller.rb:8:in `create'
+Started GET "/tacos" for 127.0.0.1 at 2018-10-01 13:29:44 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for TacosController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:29:47 -0400
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 72ms (Views: 67.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 13:29:50 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zzJwwa6wqXH/gv94q4E71Ol/itd41MOg7s2exH1L+lyr8Lco7k0nGDlS+1uIPcxnqW5wsRjK3i6ZtSiReJtvVg==", "ingredient"=>{"ingredient_id"=>"4"}, "commit"=>"Create Taco"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: taco):
+  
+app/controllers/tacos_controller.rb:38:in `taco_params'
+app/controllers/tacos_controller.rb:8:in `create'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:31:14 -0400
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 58ms (Views: 45.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 13:31:17 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AwKgDd+ffZr8mLcFMrzvKUH9Urq8ZAL4AfnjCctGS4FnwGfkn2Lz8zpIsyYRABiaAeyo3Nx6H3Z2gVVczpbeiw==", "ingredient"=>{"ingredient_id"=>"4"}, "commit"=>"Create Taco"}
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateUsers (20181001142609)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "username" varchar, "password" varchar, "email" varchar, "address" varchar, "phone_number" integer, "location_id" integer, "taco_points" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181001142609_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181001142609"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLocations (20181001142946)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "locations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "address" varchar, "phone_number" integer, "email" varchar, "opening_time" datetime, "closing_time" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181001142946_create_locations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181001142946"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateTacos (20181001143255)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "tacos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181001143255_create_tacos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181001143255"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateIngredients (20181001143353)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "price" integer, "calories" integer, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181001143353_create_ingredients.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181001143353"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateCategories (20181001143510)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181001143510_create_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181001143510"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateCoupons (20181001143527)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "coupons" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "point_cost" integer, "type" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181001143527_create_coupons.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181001143527"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateUserTacos (20181001143645)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "user_tacos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "taco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181001143645_create_user_tacos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181001143645"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateTacoIngredients (20181001143725)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "taco_ingredients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "taco_id" integer, "ingredient_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181001143725_create_taco_ingredients.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181001143725"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-01 17:39:21.930290"], ["updated_at", "2018-10-01 17:39:21.930290"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:2
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:3
+  [1m[36mTaco Load (0.2ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos"[0m
+  ↳ db/seeds.rb:4
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "protein"], ["created_at", "2018-10-01 17:39:26.536409"], ["updated_at", "2018-10-01 17:39:26.536409"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "topping"], ["created_at", "2018-10-01 17:39:26.541471"], ["updated_at", "2018-10-01 17:39:26.541471"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "tortilla"], ["created_at", "2018-10-01 17:39:26.544603"], ["updated_at", "2018-10-01 17:39:26.544603"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sauce"], ["created_at", "2018-10-01 17:39:26.547867"], ["updated_at", "2018-10-01 17:39:26.547867"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "bean"], ["created_at", "2018-10-01 17:39:26.551833"], ["updated_at", "2018-10-01 17:39:26.551833"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "topping"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "topping"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "topping"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "protein"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "protein"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "protein"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "tortilla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "tortilla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "tortilla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "tortilla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sauce"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sauce"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sauce"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "bean"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "bean"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "lettuce"], ["price", 0], ["calories", 0], ["category_id", 2], ["created_at", "2018-10-01 17:39:26.587347"], ["updated_at", "2018-10-01 17:39:26.587347"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "cheese"], ["price", 0], ["calories", 0], ["category_id", 2], ["created_at", "2018-10-01 17:39:26.591408"], ["updated_at", "2018-10-01 17:39:26.591408"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tomato"], ["price", 0], ["calories", 0], ["category_id", 2], ["created_at", "2018-10-01 17:39:26.595134"], ["updated_at", "2018-10-01 17:39:26.595134"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.8ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "beef"], ["price", 0], ["calories", 0], ["category_id", 1], ["created_at", "2018-10-01 17:39:26.606613"], ["updated_at", "2018-10-01 17:39:26.606613"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "chicken"], ["price", 0], ["calories", 0], ["category_id", 1], ["created_at", "2018-10-01 17:39:26.613886"], ["updated_at", "2018-10-01 17:39:26.613886"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.8ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tofu"], ["price", 0], ["calories", 0], ["category_id", 1], ["created_at", "2018-10-01 17:39:26.627508"], ["updated_at", "2018-10-01 17:39:26.627508"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "multigrain"], ["price", 0], ["calories", 0], ["category_id", 3], ["created_at", "2018-10-01 17:39:26.633491"], ["updated_at", "2018-10-01 17:39:26.633491"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (1.0ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "white"], ["price", 0], ["calories", 0], ["category_id", 3], ["created_at", "2018-10-01 17:39:26.638474"], ["updated_at", "2018-10-01 17:39:26.638474"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "corn"], ["price", 0], ["calories", 0], ["category_id", 3], ["created_at", "2018-10-01 17:39:26.649999"], ["updated_at", "2018-10-01 17:39:26.649999"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "gluten free"], ["price", 0], ["calories", 0], ["category_id", 3], ["created_at", "2018-10-01 17:39:26.663801"], ["updated_at", "2018-10-01 17:39:26.663801"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (8.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "mild"], ["price", 0], ["calories", 0], ["category_id", 4], ["created_at", "2018-10-01 17:39:26.669703"], ["updated_at", "2018-10-01 17:39:26.669703"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "medium"], ["price", 0], ["calories", 0], ["category_id", 4], ["created_at", "2018-10-01 17:39:26.682547"], ["updated_at", "2018-10-01 17:39:26.682547"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "hot"], ["price", 0], ["calories", 0], ["category_id", 4], ["created_at", "2018-10-01 17:39:26.687293"], ["updated_at", "2018-10-01 17:39:26.687293"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "black"], ["price", 0], ["calories", 0], ["category_id", 5], ["created_at", "2018-10-01 17:39:26.693934"], ["updated_at", "2018-10-01 17:39:26.693934"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "pinto"], ["price", 0], ["calories", 0], ["category_id", 5], ["created_at", "2018-10-01 17:39:26.700321"], ["updated_at", "2018-10-01 17:39:26.700321"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mLocation Create (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("address", "phone_number", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["address", "dupont circle"], ["phone_number", 5555739283], ["email", "dupont@tacos.com"], ["created_at", "2018-10-01 17:39:26.734237"], ["updated_at", "2018-10-01 17:39:26.734237"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mLocation Create (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("address", "phone_number", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["address", "southwest"], ["phone_number", 5559874273], ["email", "southwest@tacos.com"], ["created_at", "2018-10-01 17:39:26.739005"], ["updated_at", "2018-10-01 17:39:26.739005"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mLocation Create (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("address", "phone_number", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["address", "metro center"], ["phone_number", 5557388372], ["email", "metrocenter@tacos.com"], ["created_at", "2018-10-01 17:39:26.743345"], ["updated_at", "2018-10-01 17:39:26.743345"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "email", "address", "phone_number", "location_id", "taco_points", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Patti"], ["username", "pattipig"], ["password", "Pattipassword1"], ["email", "patti@gmail.com"], ["address", "somewhere in dc"], ["phone_number", 5555379372], ["location_id", 2], ["taco_points", 0], ["created_at", "2018-10-01 17:39:26.774658"], ["updated_at", "2018-10-01 17:39:26.774658"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "email", "address", "phone_number", "location_id", "taco_points", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sam"], ["username", "samtheham"], ["password", "Sampassword1"], ["email", "sam@gmail.com"], ["address", "somewhere in virginia"], ["phone_number", 5552342986], ["location_id", 3], ["taco_points", 0], ["created_at", "2018-10-01 17:39:26.783312"], ["updated_at", "2018-10-01 17:39:26.783312"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "email", "address", "phone_number", "location_id", "taco_points", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Barack"], ["username", "baracktherock"], ["password", "president1al"], ["email", "bobama@whitehouse.gov"], ["address", "somewhere in dc"], ["phone_number", 5558783729], ["location_id", 1], ["taco_points", 0], ["created_at", "2018-10-01 17:39:26.789328"], ["updated_at", "2018-10-01 17:39:26.789328"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:85
+  [1m[36mTaco Create (0.4ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Taco 'bout it'"], ["created_at", "2018-10-01 17:39:26.801776"], ["updated_at", "2018-10-01 17:39:26.801776"]]
+  ↳ db/seeds.rb:85
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mTaco Create (0.6ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Lost in the Sauce"], ["created_at", "2018-10-01 17:39:26.812474"], ["updated_at", "2018-10-01 17:39:26.812474"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:87
+  [1m[36mTaco Create (0.5ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Beanormous"], ["created_at", "2018-10-01 17:39:26.818570"], ["updated_at", "2018-10-01 17:39:26.818570"]]
+  ↳ db/seeds.rb:87
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:87
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:88
+  [1m[36mTaco Create (0.5ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Cheese Louise"], ["created_at", "2018-10-01 17:39:26.822839"], ["updated_at", "2018-10-01 17:39:26.822839"]]
+  ↳ db/seeds.rb:88
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:88
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:89
+  [1m[36mTaco Create (0.7ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Macho Taco"], ["created_at", "2018-10-01 17:39:26.829131"], ["updated_at", "2018-10-01 17:39:26.829131"]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "cheese"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:91
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "chicken"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "black"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:93
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "tomato"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:94
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 864714ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `valid?' for nil:NilClass):
+  
+app/controllers/tacos_controller.rb:11:in `create'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:45:42 -0400
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:45:42 -0400
+Processing by TacosController#new as HTML
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.8ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendering tacos/new.html.erb within layouts/application
+  ↳ app/views/tacos/new.html.erb:5
+  [1m[36mIngredient Load (0.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (7.0ms)
+  Rendered tacos/new.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.8ms)
+
+
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.6ms)
+
+
+  
+  
+ActionView::Template::Error (SQLite3::CorruptException: database disk image is malformed: SELECT "ingredients".* FROM "ingredients"):
+ActionView::Template::Error (SQLite3::CorruptException: database disk image is malformed: SELECT "ingredients".* FROM "ingredients"):
+    2: 
+    3: 
+    4: <%=form_for @taco do |f|%>
+    5: <%=select("ingredient", "ingredient_id", Ingredient.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'None'})%>
+    6: <%=f.submit%>
+    7: <% end  %>
+    2: 
+    3: 
+    4: <%=form_for @taco do |f|%>
+    5: <%=select("ingredient", "ingredient_id", Ingredient.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'None'})%>
+    6: <%=f.submit%>
+    7: <% end  %>
+  
+  
+app/views/tacos/new.html.erb:5:in `collect'
+app/views/tacos/new.html.erb:5:in `block in _app_views_tacos_new_html_erb___1006505647749296332_70353037450440'
+app/views/tacos/new.html.erb:4:in `_app_views_tacos_new_html_erb___1006505647749296332_70353037450440'
+app/views/tacos/new.html.erb:5:in `collect'
+app/views/tacos/new.html.erb:5:in `block in _app_views_tacos_new_html_erb___1006505647749296332_70353037450440'
+app/views/tacos/new.html.erb:4:in `_app_views_tacos_new_html_erb___1006505647749296332_70353037450440'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:45:53 -0400
+Processing by TacosController#new as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed: PRAGMA table_info("tacos")):
+  
+app/controllers/tacos_controller.rb:4:in `new'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:46:00 -0400
+Processing by TacosController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed: PRAGMA table_info("tacos")):
+  
+app/controllers/tacos_controller.rb:4:in `new'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:46:14 -0400
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed: SELECT name FROM sqlite_master WHERE name <> 'sqlite_sequence' AND name = 'schema_migrations' AND type IN ('table')):
+  
+sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `initialize'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `new'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `prepare'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:216:in `block (2 levels) in exec_query'
+activesupport (5.2.1) lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+activesupport (5.2.1) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (5.2.1) lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:213:in `block in exec_query'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:579:in `block (2 levels) in log'
+/Users/samashtar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:578:in `block in log'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:569:in `log'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:212:in `exec_query'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/database_statements.rb:93:in `query'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/database_statements.rb:89:in `query_values'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:61:in `table_exists?'
+activerecord (5.2.1) lib/active_record/schema_migration.rb:22:in `table_exists?'
+activerecord (5.2.1) lib/active_record/migration.rb:1058:in `get_all_versions'
+activerecord (5.2.1) lib/active_record/migration.rb:1071:in `needs_migration?'
+activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:46:18 -0400
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed: SELECT name FROM sqlite_master WHERE name <> 'sqlite_sequence' AND name = 'schema_migrations' AND type IN ('table')):
+  
+sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `initialize'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `new'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `prepare'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:216:in `block (2 levels) in exec_query'
+activesupport (5.2.1) lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+activesupport (5.2.1) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (5.2.1) lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:213:in `block in exec_query'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:579:in `block (2 levels) in log'
+/Users/samashtar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:578:in `block in log'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:569:in `log'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:212:in `exec_query'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/database_statements.rb:93:in `query'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/database_statements.rb:89:in `query_values'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:61:in `table_exists?'
+activerecord (5.2.1) lib/active_record/schema_migration.rb:22:in `table_exists?'
+activerecord (5.2.1) lib/active_record/migration.rb:1058:in `get_all_versions'
+activerecord (5.2.1) lib/active_record/migration.rb:1071:in `needs_migration?'
+activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:46:34 -0400
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed: SELECT name FROM sqlite_master WHERE name <> 'sqlite_sequence' AND name = 'schema_migrations' AND type IN ('table')):
+  
+sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `initialize'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `new'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `prepare'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:216:in `block (2 levels) in exec_query'
+activesupport (5.2.1) lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+activesupport (5.2.1) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (5.2.1) lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:213:in `block in exec_query'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:579:in `block (2 levels) in log'
+/Users/samashtar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:578:in `block in log'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:569:in `log'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:212:in `exec_query'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/database_statements.rb:93:in `query'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/database_statements.rb:89:in `query_values'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:61:in `table_exists?'
+activerecord (5.2.1) lib/active_record/schema_migration.rb:22:in `table_exists?'
+activerecord (5.2.1) lib/active_record/migration.rb:1058:in `get_all_versions'
+activerecord (5.2.1) lib/active_record/migration.rb:1071:in `needs_migration?'
+activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:47:52 -0400
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: database disk image is malformed: SELECT name FROM sqlite_master WHERE name <> 'sqlite_sequence' AND name = 'schema_migrations' AND type IN ('table')):
+  
+sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `initialize'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `new'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:91:in `prepare'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:216:in `block (2 levels) in exec_query'
+activesupport (5.2.1) lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+activesupport (5.2.1) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (5.2.1) lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:213:in `block in exec_query'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:579:in `block (2 levels) in log'
+/Users/samashtar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:578:in `block in log'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:569:in `log'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:212:in `exec_query'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/database_statements.rb:93:in `query'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/database_statements.rb:89:in `query_values'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:61:in `table_exists?'
+activerecord (5.2.1) lib/active_record/schema_migration.rb:22:in `table_exists?'
+activerecord (5.2.1) lib/active_record/migration.rb:1058:in `get_all_versions'
+activerecord (5.2.1) lib/active_record/migration.rb:1071:in `needs_migration?'
+activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateUsers (20181001142609)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "username" varchar, "password" varchar, "email" varchar, "address" varchar, "phone_number" integer, "location_id" integer, "taco_points" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181001142609_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181001142609"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateLocations (20181001142946)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "locations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "address" varchar, "phone_number" integer, "email" varchar, "opening_time" datetime, "closing_time" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181001142946_create_locations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181001142946"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateTacos (20181001143255)
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "tacos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181001143255_create_tacos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181001143255"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateIngredients (20181001143353)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "price" integer, "calories" integer, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181001143353_create_ingredients.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181001143353"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateCategories (20181001143510)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181001143510_create_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181001143510"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateCoupons (20181001143527)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "coupons" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "point_cost" integer, "type" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181001143527_create_coupons.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181001143527"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateUserTacos (20181001143645)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "user_tacos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "taco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181001143645_create_user_tacos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181001143645"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateTacoIngredients (20181001143725)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "taco_ingredients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "taco_id" integer, "ingredient_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181001143725_create_taco_ingredients.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181001143725"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-01 17:50:15.759597"], ["updated_at", "2018-10-01 17:50:15.759597"]]
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:2
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:3
+  [1m[36mTaco Load (0.2ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos"[0m
+  ↳ db/seeds.rb:4
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "protein"], ["created_at", "2018-10-01 17:50:24.293564"], ["updated_at", "2018-10-01 17:50:24.293564"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "topping"], ["created_at", "2018-10-01 17:50:24.298105"], ["updated_at", "2018-10-01 17:50:24.298105"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "tortilla"], ["created_at", "2018-10-01 17:50:24.302933"], ["updated_at", "2018-10-01 17:50:24.302933"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sauce"], ["created_at", "2018-10-01 17:50:24.306669"], ["updated_at", "2018-10-01 17:50:24.306669"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "bean"], ["created_at", "2018-10-01 17:50:24.310392"], ["updated_at", "2018-10-01 17:50:24.310392"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "topping"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "topping"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "topping"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "protein"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "protein"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "protein"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "tortilla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "tortilla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "tortilla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "tortilla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sauce"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sauce"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sauce"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "bean"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "bean"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "lettuce"], ["price", 0], ["calories", 0], ["category_id", 2], ["created_at", "2018-10-01 17:50:24.348784"], ["updated_at", "2018-10-01 17:50:24.348784"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "cheese"], ["price", 0], ["calories", 0], ["category_id", 2], ["created_at", "2018-10-01 17:50:24.357362"], ["updated_at", "2018-10-01 17:50:24.357362"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tomato"], ["price", 0], ["calories", 0], ["category_id", 2], ["created_at", "2018-10-01 17:50:24.362085"], ["updated_at", "2018-10-01 17:50:24.362085"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "beef"], ["price", 0], ["calories", 0], ["category_id", 1], ["created_at", "2018-10-01 17:50:24.367275"], ["updated_at", "2018-10-01 17:50:24.367275"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "chicken"], ["price", 0], ["calories", 0], ["category_id", 1], ["created_at", "2018-10-01 17:50:24.372200"], ["updated_at", "2018-10-01 17:50:24.372200"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.6ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tofu"], ["price", 0], ["calories", 0], ["category_id", 1], ["created_at", "2018-10-01 17:50:24.389446"], ["updated_at", "2018-10-01 17:50:24.389446"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "multigrain"], ["price", 0], ["calories", 0], ["category_id", 3], ["created_at", "2018-10-01 17:50:24.406184"], ["updated_at", "2018-10-01 17:50:24.406184"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "white"], ["price", 0], ["calories", 0], ["category_id", 3], ["created_at", "2018-10-01 17:50:24.412892"], ["updated_at", "2018-10-01 17:50:24.412892"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "corn"], ["price", 0], ["calories", 0], ["category_id", 3], ["created_at", "2018-10-01 17:50:24.423768"], ["updated_at", "2018-10-01 17:50:24.423768"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "gluten free"], ["price", 0], ["calories", 0], ["category_id", 3], ["created_at", "2018-10-01 17:50:24.427797"], ["updated_at", "2018-10-01 17:50:24.427797"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "mild"], ["price", 0], ["calories", 0], ["category_id", 4], ["created_at", "2018-10-01 17:50:24.432947"], ["updated_at", "2018-10-01 17:50:24.432947"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "medium"], ["price", 0], ["calories", 0], ["category_id", 4], ["created_at", "2018-10-01 17:50:24.437351"], ["updated_at", "2018-10-01 17:50:24.437351"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "hot"], ["price", 0], ["calories", 0], ["category_id", 4], ["created_at", "2018-10-01 17:50:24.441259"], ["updated_at", "2018-10-01 17:50:24.441259"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "black"], ["price", 0], ["calories", 0], ["category_id", 5], ["created_at", "2018-10-01 17:50:24.445374"], ["updated_at", "2018-10-01 17:50:24.445374"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "price", "calories", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "pinto"], ["price", 0], ["calories", 0], ["category_id", 5], ["created_at", "2018-10-01 17:50:24.454031"], ["updated_at", "2018-10-01 17:50:24.454031"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("address", "phone_number", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["address", "dupont circle"], ["phone_number", 5555739283], ["email", "dupont@tacos.com"], ["created_at", "2018-10-01 17:50:24.470273"], ["updated_at", "2018-10-01 17:50:24.470273"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mLocation Create (0.6ms)[0m  [1m[32mINSERT INTO "locations" ("address", "phone_number", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["address", "southwest"], ["phone_number", 5559874273], ["email", "southwest@tacos.com"], ["created_at", "2018-10-01 17:50:24.473750"], ["updated_at", "2018-10-01 17:50:24.473750"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[36mLocation Create (1.9ms)[0m  [1m[32mINSERT INTO "locations" ("address", "phone_number", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["address", "metro center"], ["phone_number", 5557388372], ["email", "metrocenter@tacos.com"], ["created_at", "2018-10-01 17:50:24.480394"], ["updated_at", "2018-10-01 17:50:24.480394"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "email", "address", "phone_number", "location_id", "taco_points", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Patti"], ["username", "pattipig"], ["password", "Pattipassword1"], ["email", "patti@gmail.com"], ["address", "somewhere in dc"], ["phone_number", 5555379372], ["location_id", 2], ["taco_points", 0], ["created_at", "2018-10-01 17:50:24.517604"], ["updated_at", "2018-10-01 17:50:24.517604"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "email", "address", "phone_number", "location_id", "taco_points", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sam"], ["username", "samtheham"], ["password", "Sampassword1"], ["email", "sam@gmail.com"], ["address", "somewhere in virginia"], ["phone_number", 5552342986], ["location_id", 3], ["taco_points", 0], ["created_at", "2018-10-01 17:50:24.523832"], ["updated_at", "2018-10-01 17:50:24.523832"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password", "email", "address", "phone_number", "location_id", "taco_points", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Barack"], ["username", "baracktherock"], ["password", "president1al"], ["email", "bobama@whitehouse.gov"], ["address", "somewhere in dc"], ["phone_number", 5558783729], ["location_id", 1], ["taco_points", 0], ["created_at", "2018-10-01 17:50:24.529229"], ["updated_at", "2018-10-01 17:50:24.529229"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:85
+  [1m[36mTaco Create (0.4ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Taco 'bout it'"], ["created_at", "2018-10-01 17:50:24.538633"], ["updated_at", "2018-10-01 17:50:24.538633"]]
+  ↳ db/seeds.rb:85
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mTaco Create (0.4ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Lost in the Sauce"], ["created_at", "2018-10-01 17:50:24.542652"], ["updated_at", "2018-10-01 17:50:24.542652"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:87
+  [1m[36mTaco Create (0.3ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Beanormous"], ["created_at", "2018-10-01 17:50:24.545863"], ["updated_at", "2018-10-01 17:50:24.545863"]]
+  ↳ db/seeds.rb:87
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:87
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:88
+  [1m[36mTaco Create (0.4ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Cheese Louise"], ["created_at", "2018-10-01 17:50:24.549675"], ["updated_at", "2018-10-01 17:50:24.549675"]]
+  ↳ db/seeds.rb:88
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:88
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:89
+  [1m[36mTaco Create (0.4ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Macho Taco"], ["created_at", "2018-10-01 17:50:24.562930"], ["updated_at", "2018-10-01 17:50:24.562930"]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "cheese"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:91
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "chicken"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "black"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:93
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "tomato"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:94
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:50:40 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 350ms (Views: 311.3ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 13:50:54 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1cqjuxfdBQqnGRtyO0Ayaz2EwdgOdFa7bpb70hAs1N2xCGRSVyCLY2HJH1EY/MXYfZU7vm5qSzUZ7k2HFfxB1w==", "ingredient"=>{"ingredient_id"=>"6"}, "commit"=>"Create Taco"}
+Completed 500 Internal Server Error in 65697ms (ActiveRecord: 0.0ms)
+
+
+  
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:52:10 -0400
+NoMethodError (undefined method `valid?' for nil:NilClass):
+Processing by TacosController#new as HTML
+  
+app/controllers/tacos_controller.rb:11:in `create'
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.9ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:6
+  Rendered tacos/new.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 567ms (Views: 94.8ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 13:52:18 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I4VOMfstVxFvFXNXHvpFdliuAhau02V82XKTrLPVasNHR4nYu9DZeKnFd3Q9RrLFGL/4cM7NePKuCiX5tgX/yQ==", "ingredient"=>{"ingredient_id"=>"7"}, "commit"=>"Create Taco"}
+Completed 500 Internal Server Error in 32862ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `valid?' for nil:NilClass):
+  
+app/controllers/tacos_controller.rb:11:in `create'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:54:11 -0400
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.9ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:6
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:7
+  Rendered tacos/new.html.erb within layouts/application (217.2ms)
+Completed 200 OK in 268ms (Views: 261.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 13:54:20 -0400
+  
+Rack::QueryParser::ParameterTypeError (expected Array (got String) for param `ingredient_id'):
+  
+rack (2.0.5) lib/rack/query_parser.rb:99:in `normalize_params'
+rack (2.0.5) lib/rack/query_parser.rb:113:in `normalize_params'
+rack (2.0.5) lib/rack/query_parser.rb:67:in `block in parse_nested_query'
+rack (2.0.5) lib/rack/query_parser.rb:64:in `each'
+rack (2.0.5) lib/rack/query_parser.rb:64:in `parse_nested_query'
+rack (2.0.5) lib/rack/request.rb:468:in `parse_query'
+rack (2.0.5) lib/rack/request.rb:343:in `POST'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:382:in `block (2 levels) in POST'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:109:in `block in parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:109:in `fetch'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:109:in `parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.1) lib/action_dispatch/http/filter_parameters.rb:43:in `filtered_parameters'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:23:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:54:27 -0400
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  [1m[36mCACHE Ingredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:6
+  [1m[36mCACHE Ingredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:7
+  Rendered tacos/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 87ms (Views: 82.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 13:54:31 -0400
+  
+Rack::QueryParser::ParameterTypeError (expected Array (got String) for param `ingredient_id'):
+  
+rack (2.0.5) lib/rack/query_parser.rb:99:in `normalize_params'
+rack (2.0.5) lib/rack/query_parser.rb:113:in `normalize_params'
+rack (2.0.5) lib/rack/query_parser.rb:67:in `block in parse_nested_query'
+rack (2.0.5) lib/rack/query_parser.rb:64:in `each'
+rack (2.0.5) lib/rack/query_parser.rb:64:in `parse_nested_query'
+rack (2.0.5) lib/rack/request.rb:468:in `parse_query'
+rack (2.0.5) lib/rack/request.rb:343:in `POST'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:382:in `block (2 levels) in POST'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:109:in `block in parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:109:in `fetch'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:109:in `parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.1) lib/action_dispatch/http/filter_parameters.rb:43:in `filtered_parameters'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:23:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:54:43 -0400
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (27.0ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `ingredient_id' for #<Taco id: nil, name: nil, created_at: nil, updated_at: nil>
+Did you mean?  ingredient_ids
+               ingredient_ids=
+               ingredients
+               ingredients=):
+    2: 
+    3: 
+    4: <%=form_for @taco do |f|%>
+    5: <%=collection_check_boxes(:taco, :ingredient_id, Ingredient.all, :id, :name)%>
+    6: 
+    7: <%=f.submit%>
+    8: <% end  %>
+  
+app/views/tacos/new.html.erb:5:in `block in _app_views_tacos_new_html_erb___224856972939928084_70335337908060'
+app/views/tacos/new.html.erb:4:in `_app_views_tacos_new_html_erb___224856972939928084_70335337908060'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 13:58:48 -0400
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 105ms (Views: 100.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 13:58:52 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sMWkrg+lmPZfooBnrbp0hBVp/AYeVZRzNx1y9ALBzqvUB2NHT1gWn5lyhESOBoM3VXgGYH5Lif1AZcShBxFboQ==", "ingredients"=>{"ingredient_id"=>["", "2", "3", "6"]}, "commit"=>"Create Taco"}
+Completed 500 Internal Server Error in 171237ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/tacos_controller.rb:11:in `create'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 14:02:04 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/Users/samashtar/Development/code/Mod2/tacotaco/Taco_Project/app/controllers/tacos_controller.rb:11: syntax error, unexpected ']', expecting ')'
+@taco = Taco.create(no_empty_params])
+                                    ^):
+  
+app/controllers/tacos_controller.rb:11: syntax error, unexpected ']', expecting ')'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 14:02:19 -0400
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (180.1ms)
+Completed 200 OK in 469ms (Views: 447.4ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 14:02:37 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n1lNb/3b28EJHdo/fO9iFQO0QNFzIWC3ORleBoOWpSz7m4qGvSZVqM/N3hxfU5WmQ6W6txM/fTlOYehThkYwJg==", "ingredients"=>{"ingredient_id"=>["", "3", "7", "11"]}, "commit"=>"Create Taco"}
+Completed 500 Internal Server Error in 78270ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/tacos_controller.rb:11:in `create'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 14:04:24 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (163.3ms)
+Completed 200 OK in 475ms (Views: 435.2ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 14:04:29 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GceYzySjDYRekypurp3Qw9S+cStRo0fCUJdseNISa/p9BV8mZF6D7ZhDLk2NISdwlK+LTTG9Wkwn79ot18L+8A==", "ingredients"=>{"ingredient_id"=>["", "3", "4", "6"]}, "commit"=>"Create Taco"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/tacos_controller.rb:9:in `create'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 14:06:43 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (409.9ms)
+Completed 200 OK in 805ms (Views: 747.2ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 14:06:48 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A49tAbn0LgLE6YCon0ZiE2iZXAgZ2kFIzaVtzuYFN9tnTaro+QmgawI5hIu8+pWgKIimbnnEXMa63dub49Wi0Q==", "ingredients"=>{"ingredient_id"=>["", "1", "3", "6"]}, "commit"=>"Create Taco"}
+Completed 500 Internal Server Error in 174094ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/tacos_controller.rb:9:in `create'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 14:09:55 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (3.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (189.1ms)
+Completed 200 OK in 491ms (Views: 458.0ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 14:10:01 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P6oNzjUgDscQKTitjefDGpo6kUWFsweOs9oeObHuDWNbaMondd2Artb5PI6uWzSp2itrI+WtGgDEoqhstD6YaQ==", "ingredients"=>{"ingredient_id"=>["", "2", "4", "7"]}, "commit"=>"Create Taco"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/tacos_controller.rb:9:in `create'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 14:10:48 -0400
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (3.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (52.8ms)
+Completed 200 OK in 129ms (Views: 118.8ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 14:10:58 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GaHdW57qkQQBacrZFi8pH6tBDWOQPTkDnH1f+Tz5YBJ9Yxqy3hcfbce5zvo1k96s61D3BfAjJI3rBemsOSn1GA==", "ingredients"=>{"ingredient_id"=>["", "2", "5", "8"]}, "commit"=>"Create Taco"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/tacos_controller.rb:9:in `create'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 14:12:28 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (195.4ms)
+Completed 200 OK in 537ms (Views: 491.9ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 14:12:32 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XpgHexSGkA1dyLpwvlBKmsExDlKwtt5fwbXa+OPJdFc6WsCSVHseZJsYvlOd7L0pgSD0NNCow9G2zWyt5hnhXQ==", "ingredients"=>{"ingredient_id"=>["", "5", "7", "9"]}, "commit"=>"Create Taco"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/tacos_controller.rb:8:in `create'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 14:14:15 -0400
+  
+SyntaxError (/Users/samashtar/Development/code/Mod2/tacotaco/Taco_Project/app/controllers/tacos_controller.rb:8: syntax error, unexpected ','
+@taco = Taco.create(name:, ingredients_ids:params[:ingr...
+                          ^
+/Users/samashtar/Development/code/Mod2/tacotaco/Taco_Project/app/controllers/tacos_controller.rb:8: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/tacos_controller.rb:8: syntax error, unexpected ','
+app/controllers/tacos_controller.rb:8: syntax error, unexpected ')', expecting keyword_end
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 14:14:36 -0400
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 96ms (Views: 75.3ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 14:14:40 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RQJFZ0pnsZVcdnrPCSzXnowvKrvUktxs4/3geq889UshwIKOCpo//JqmfuwqkCAtzD7Q3bSMweKUhVYvquxgQQ==", "ingredients"=>{"ingredient_id"=>["", "5", "9"]}, "commit"=>"Create Taco"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'ingredients_ids' for Taco.):
+  
+app/controllers/tacos_controller.rb:8:in `create'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 14:14:52 -0400
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 131ms (Views: 104.2ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 14:14:55 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q5A9ZNjEyEuKnNsHp1wWHjZAac1YJOdK+kvIlcQ9UDbPUvqNmDlGIkxM3ySE4OGtdlGTqzg6+sSNM37Awe3FPA==", "ingredients"=>{"ingredient_id"=>["", "5", "7"]}, "commit"=>"Create Taco"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'ingredients_id' for Taco.):
+  
+app/controllers/tacos_controller.rb:8:in `create'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 14:15:04 -0400
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 117ms (Views: 78.0ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 14:15:08 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eCQlYEGnW6w+hsm3jABlz3n0X1tPm/8WWywxaX+gl0Ec5uKJAVrVxfhWzZSvvJJ8OeWlPS+F4pgsVIc8enACSw==", "ingredients"=>{"ingredient_id"=>["", "7", "10", "14"]}, "commit"=>"Create Taco"}
+  [1m[36mIngredient Load (0.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (?, ?, ?)[0m  [["id", 7], ["id", 10], ["id", 14]]
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[36mTaco Create (0.7ms)[0m  [1m[32mINSERT INTO "tacos" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-10-01 18:15:08.184988"], ["updated_at", "2018-10-01 18:15:08.184988"]]
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[36mTacoIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "taco_ingredients" ("taco_id", "ingredient_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["taco_id", 6], ["ingredient_id", 7], ["created_at", "2018-10-01 18:15:08.192702"], ["updated_at", "2018-10-01 18:15:08.192702"]]
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[36mTacoIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "taco_ingredients" ("taco_id", "ingredient_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["taco_id", 6], ["ingredient_id", 10], ["created_at", "2018-10-01 18:15:08.196963"], ["updated_at", "2018-10-01 18:15:08.196963"]]
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[36mTacoIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "taco_ingredients" ("taco_id", "ingredient_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["taco_id", 6], ["ingredient_id", 14], ["created_at", "2018-10-01 18:15:08.208104"], ["updated_at", "2018-10-01 18:15:08.208104"]]
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tacos_controller.rb:8
+Completed 500 Internal Server Error in 57386ms (ActiveRecord: 9.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/tacos_controller.rb:12:in `create'
+Started GET "/tacos/new" for 127.0.0.1 at 2018-10-01 14:16:11 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/samashtar/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/tacos/new.html.erb:5
+  Rendered tacos/new.html.erb within layouts/application (229.4ms)
+Completed 200 OK in 604ms (Views: 551.9ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/tacos" for 127.0.0.1 at 2018-10-01 14:16:18 -0400
+Processing by TacosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sJemFINwcofWZu7DhLjbP8saMw6GtehLPURWDp8nUwbUVWH9w4387hC26uCnBCyMiwvJaOar9cVKPOBbmvfGDA==", "ingredients"=>{"ingredient_id"=>["", "3", "5", "11"]}, "commit"=>"Create Taco"}
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."id" IN (?, ?, ?)[0m  [["id", 3], ["id", 5], ["id", 11]]
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[36mTaco Create (0.6ms)[0m  [1m[32mINSERT INTO "tacos" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-10-01 18:16:18.724176"], ["updated_at", "2018-10-01 18:16:18.724176"]]
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[36mTacoIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "taco_ingredients" ("taco_id", "ingredient_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["taco_id", 7], ["ingredient_id", 3], ["created_at", "2018-10-01 18:16:18.726841"], ["updated_at", "2018-10-01 18:16:18.726841"]]
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[36mTacoIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "taco_ingredients" ("taco_id", "ingredient_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["taco_id", 7], ["ingredient_id", 5], ["created_at", "2018-10-01 18:16:18.730137"], ["updated_at", "2018-10-01 18:16:18.730137"]]
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[36mTacoIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "taco_ingredients" ("taco_id", "ingredient_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["taco_id", 7], ["ingredient_id", 11], ["created_at", "2018-10-01 18:16:18.734822"], ["updated_at", "2018-10-01 18:16:18.734822"]]
+  ↳ app/controllers/tacos_controller.rb:8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tacos_controller.rb:8
+Completed 500 Internal Server Error in 57227ms (ActiveRecord: 5.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/tacos_controller.rb:12:in `create'

@@ -1,0 +1,8 @@
+<h1>Make Your Perfect Taco </h1>
+
+
+<%=form_for @taco do |f|%>
+<%=collection_check_boxes(:ingredients, :ingredient_id, Ingredient.all, :id, :name)%>
+
+<%=f.submit%>
+<% end  %>
