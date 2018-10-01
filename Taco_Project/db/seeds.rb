@@ -59,7 +59,7 @@ users = [
     email: "patti@gmail.com",
     address: "somewhere in dc",
     phone_number: 5555379372,
-    location_id: Location.find_by(address: "southwest"),
+    location_id: Location.find_by(address: "southwest").id,
     taco_points: 0},
   {name: "Sam",
     username: "samtheham",
@@ -67,7 +67,7 @@ users = [
     email: "sam@gmail.com",
     address: "somewhere in virginia",
     phone_number: 5552342986,
-    location_id: Location.find_by(address: "metro center"),
+    location_id: Location.find_by(address: "metro center").id,
     taco_points: 0},
   {name: "Barack",
     username: "baracktherock",
@@ -75,7 +75,7 @@ users = [
     email: "bobama@whitehouse.gov",
     address: "somewhere in dc",
     phone_number: 5558783729,
-    location_id: Location.find_by(address: "dupont circle"),
+    location_id: Location.find_by(address: "dupont circle").id,
     taco_points: 0},
 ]
 
