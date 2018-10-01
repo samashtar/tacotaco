@@ -1,11 +1,20 @@
 class TacosController < ApplicationController
 
+def index
+@user = User.find_by(session[:username])
+@tacos = @user.tacos
+end
+
+
 def new
   @taco = Taco.new
+  @user = User.find_by(session[:username])
 end
 
 def create
+  @user = User.find_by(session[:username])
   @taco = Taco.create(ingredient_ids:params[:ingredients][:ingredient_id].compact)
+  @user.tacos << @taco 
   if @taco.valid?
     redirect_to @taco
   else
@@ -14,20 +23,34 @@ def create
 end
 
 def show
-@taco = Taco.find(params[:id])
+  @taco = Taco.find(params[:id])
 end
 
 def edit
+  @taco = Taco.find(params[:id])
 end
 
 def update
+  @taco = Taco.find(params[:id])
+  @taco.update(ingredient_ids:params[:ingredients][:ingredient_id].compact)
+  if @taco.valid?
+      redirect_to @taco
+    else
+      redirect_to :edit
+    end
 
 end
 
 def destroy
+  @taco = Taco.find(params[:id])
+  @taco.destroy
+
+  redirect_to orders_path
 end
 
 private
 
 def taco_params
+end
+
 end
