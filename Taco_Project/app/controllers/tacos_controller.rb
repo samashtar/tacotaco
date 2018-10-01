@@ -15,7 +15,7 @@ end
 end
 
 def show
-  @taco = Taco.find(params)
+@taco = Taco.find(params[:id])
 end
 
 
