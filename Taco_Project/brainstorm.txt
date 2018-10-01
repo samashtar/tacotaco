@@ -1,0 +1,83 @@
+1) A user has many tacos, coupons
+2) A user belongs to a location
+3) A taco has many ingredients and users
+4) A location has many users
+5) A coupon has many users
+
+BASIC MODELS
+
+#USER
+  :name
+  :username
+  :secure_password
+  :email
+  :address
+  :phone number
+  :location_id
+  *:taco_points
+  *:reset password using security question
+  *:actual confirmation email on account creation
+  VALIDATIONS
+    has_secure_password
+      - more than 6 characters, have a capital, number (*special char?)
+      - cannot have spaces
+    --all fields must be present--
+    username: uniqueness, no spaces, no special characters
+    email: uniqueness, must have @ (email validator?)
+      - automatically deletes dashes?
+    phone number: must be 10 or 11 numbers, only numbers
+    address: *real address?
+    taco_points: must be an integer, cannot be negative, defaults to zero
+
+#LOCATION
+  :address
+  :phone number
+  :email
+  :opening_time
+  :closing_time
+  *(days closed)
+  VALIDATIONS
+    all fields must be present
+    phone number: uniqueness, must be 10 numbers, only numbers
+    email: uniqueness, must have @ (email validator?)
+    opening_time: Time object
+    closing_time: Time object
+
+#TACO
+  :name
+    - must be present
+
+#INGREDIENTS
+  :price
+  :name
+  *:calories
+  :category_id
+  VALIDATIONS
+    price and calories must be integers
+    name: uniqueness
+    category_id must be present
+
+#CATEGORY
+  :name
+    - presence
+
+#COUPON
+  :name
+  :point_cost
+  :type
+  - (bogo, %off)
+  :description
+    VALIDATIONS
+    - all fields must be present
+    - description is a string
+    - point_cost is an integer greater than zero
+    - type is a string
+
+ASSOCIATIONS
+
+  JOIN TABLES
+    user_tacos
+    taco_ingredients
+
+  BELONGS_TO
+    user belongs to a location
