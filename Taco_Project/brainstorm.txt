@@ -81,3 +81,12 @@ ASSOCIATIONS
 
   BELONGS_TO
     user belongs to a location
+
+
+
+
+User Controller
+Taco Controller
+Ingredient Controller
+Location Controller
+Category Controller 
