@@ -1,0 +1,8 @@
+<h1>Location Info</h1>
+
+<%= render partial: 'location', locals: {location: @location} %>
+
+<h3><%=link_to "Edit this Location?", edit_location_path(@location)%></h3>
+<h3><%=form_for @location, method: :delete do |f|%>
+  <%= f.submit "Delete?" %>
+<% end %></h3>
