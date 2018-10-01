@@ -14,13 +14,21 @@ def create
 end
 
 def show
-@taco = Taco.find(params[:id])
+  @taco = Taco.find(params[:id])
 end
 
 def edit
+  @taco = Taco.find(params[:id])
 end
 
 def update
+  @taco = Taco.find(params[:id])
+  @taco.update(ingredient_ids:params[:ingredients][:ingredient_id].compact)
+  if @taco.valid?
+      redirect_to @taco
+    else
+      redirect_to :edit
+    end
 
 end
 
@@ -30,4 +38,6 @@ end
 private
 
 def taco_params
+end
+
 end
