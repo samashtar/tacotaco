@@ -2,6 +2,7 @@ class TacosController < ApplicationController
 
 def new
   @taco = Taco.new
+  # @user = User.find_by(session[:username])
 end
 
 def create
@@ -33,6 +34,10 @@ def update
 end
 
 def destroy
+  @taco = Taco.find(params[:id])
+  @taco.destroy
+
+  redirect_to orders_path
 end
 
 private
