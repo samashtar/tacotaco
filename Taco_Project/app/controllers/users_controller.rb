@@ -34,7 +34,8 @@ class UsersController < ApplicationController
       :address,
       :phone_number,
       :location_id,
-      :taco_points)
+      :taco_points,
+      :password_confirmation)
   end
 
 end

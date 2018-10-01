@@ -17,8 +17,6 @@ def show
   @taco = Taco.find(params)
 end
 
-
-
 def edit
 end
 
@@ -29,18 +27,7 @@ end
 def destroy
 end
 
-
-
-
 private
 
 def taco_params
-end
-
-
-
-
-
-
-
 end
