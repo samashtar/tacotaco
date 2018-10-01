@@ -6,9 +6,13 @@ class SessionsController < ApplicationController
 
   def create
     if !params[:username].nil? && !params[:username].empty?
-      session[:username] = params[:username]
-      user = User.find_by(username: session[:username])
-      redirect_to user_path(user)
+      if User.find_by(username: params[:username])
+        session[:username] = params[:username]
+        user = User.find_by(username: session[:username])
+        redirect_to user_path(user)
+      else
+        redirect_to '/login'
+      end
     else
       redirect_to '/login'
     end
