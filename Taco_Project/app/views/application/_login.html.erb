@@ -1,6 +1,11 @@
 <style>
 
-  .wrapper {
+  .grid_wrapper {
+    width: 50%;
+    margin: auto;
+  }
+
+  .grid {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 10px;
@@ -11,14 +16,15 @@
     padding: 20px
   }
 </style>
+<div class="grid_wrapper">
+  <div class="grid">
+    <div class="login">
+      <h2>Login?</h2>
+      <%= render partial: 'sessions/form' %>
+    </div>
 
-<div class="wrapper">
-  <div class="login">
-    <h2>Login?</h2>
-    <%= render partial: 'sessions/form' %>
-  </div>
-
-  <div class="create_account">
-    <h2><%= link_to "Create an account?", new_user_path%></h2>
+    <div class="create_account">
+      <h2><%= link_to "Create an account?", new_user_path%></h2>
+    </div>
   </div>
 </div>
