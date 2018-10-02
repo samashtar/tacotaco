@@ -1,8 +1,23 @@
-<ul>
-  <li><%=location.name%></li>
-  <li><%=location.address%></li>
-  <li><%=location.email%></li>
-  <li><%=location.phone_number%></li>
-  <li><%=location.opening_time%></li>
-  <li><%=location.closing_time%></li>
-</ul>
+<style>
+  .wrapper {
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+
+  .wrapper>div {
+    padding: 20px;
+  }
+
+</style>
+
+<div class="wrapper">
+  <div><ul>
+    <li><%=location.name%></li>
+    <li><%=location.address%></li>
+    <li><%=location.email%></li>
+    <li><%=location.phone_number%></li>
+    <li><%=location.opening_time%></li>
+    <li><%=location.closing_time%></li>
+  </ul></div>
+</div>
