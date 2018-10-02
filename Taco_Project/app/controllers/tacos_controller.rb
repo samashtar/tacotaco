@@ -37,7 +37,7 @@ end
 
 def update
   @taco = Taco.find(params[:id])
-  @taco.update(ingredients:params[:ingredients][:ingredient_id].compact)
+  @taco.update(taco_params)
   if @taco.valid?
       redirect_to @taco
     else
