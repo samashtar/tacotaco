@@ -1,11 +1,11 @@
 class OrdersController < ApplicationController
 def index
-  @user = User.find(1)
+  @user = current_user
 end
 
 
 def finalize
-  @user = User.find(1)
+  @user = current_user
 end
 
 

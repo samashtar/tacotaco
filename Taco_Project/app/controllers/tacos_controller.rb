@@ -1,12 +1,14 @@
 class TacosController < ApplicationController
 
 def new
-  @user = User.find(1)
+  @user = current_user
   @taco = Taco.new
+  @category = Category.all
+
 end
 
 def create
-  @user = User.find_by(session[:username])
+  @user = current_user
   @taco = Taco.create(ingredient_ids:params[:ingredients][:ingredient_id].compact)
   @user.tacos << @taco
   if @taco.valid?

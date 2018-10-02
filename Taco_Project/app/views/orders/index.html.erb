@@ -5,7 +5,7 @@
 <h2>Your Taco's Ingredients</h2>
 <% taco.ingredients.each do |ingredient| %>
 <ul>
-  <%= ingredient.name %>
+  <%= ingredient.name.titleize %>
 </ul>
 <% end %>
 <h3>Taco Price: $<%= taco.taco_price %> </h3>

@@ -2,7 +2,28 @@
 
 
 <%=form_for @taco do |f|%>
-<%=collection_check_boxes(:ingredients, :ingredient_id, Ingredient.all, :id, :name)%>
+<%=f.label "Choose Your Tortilla" %> <br>
+<%=f.collection_select(:ingredient_ids, Ingredient.category("tortilla"), :id, :name)%><br>
+
+
+<%=f.label "Choose Your Beans" %><br>
+<%=f.collection_select(:ingredient_ids, Ingredient.category("bean"), :id, :name)%><br>
+
+<%=f.label "Choose Your Protein" %><br>
+<%=f.collection_select(:ingredient_ids, Ingredient.category("protein"), :id, :name)%> <br>
+
+<%=f.label "Choose Your Toppings" %><br>
+<%=collection_check_boxes(:ingredients, :ingredient_id, Ingredient.category("topping"), :id, :name)%><br>
+
+<%=f.label "Choose Your Sauce" %><br>
+<%=collection_check_boxes(:ingredients, :ingredient_id, Ingredient.category("sauce"), :id, :name)%><br>
+
+
+
+
+
+
 
 <%=f.submit%>
 <% end  %>
+I
