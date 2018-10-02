@@ -4,8 +4,9 @@ def index
 end
 
 
-
-
+def finalize
+  @user = User.find(1)
+end
 
 
 
