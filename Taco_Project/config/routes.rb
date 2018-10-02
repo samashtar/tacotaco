@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :users
   resources :orders
 
+  get '/about', to: 'application#about'
+
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/', to: 'application#index'

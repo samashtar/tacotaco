@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
 
   end
 
+  def about
+
+  end
+
   def current_user
     if !session[:user_id].nil?
       User.find(session[:user_id])
@@ -13,8 +17,5 @@ class ApplicationController < ActionController::Base
       nil
     end
   end
-
-
-
 
 end
