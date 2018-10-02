@@ -1,20 +1,12 @@
 <h1>Nice Taco!</h1>
 
-
-<h2>Your Taco's Ingredients
-</h2>
-
+<h2>Your Taco's Ingredients</h2>
 
 <% @taco.ingredients.each do |ingredient| %>
-<ul>
-  <%= ingredient.name %>
-</ul>
-
+  <ul>
+    <%= ingredient.name %>
+  </ul>
 <% end %>
-
-
-
-
 
 <h3><%=link_to "Edit This Taco", edit_taco_path(@taco)%></h3>
 <h3><%= link_to "Make a new taco", new_taco_path %></h3>
@@ -22,5 +14,6 @@
           method: :delete,
           data: { confirm: 'Are you sure?' } %></td>
 </tr>
+
 <h3>Complete Your Order</h3>
 <h3>Total Order Cost:</h3>
