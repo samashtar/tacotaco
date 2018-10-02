@@ -1,29 +1,21 @@
 <h1>Make Your Perfect Taco </h1>
 
-
 <%=form_for @taco do |f|%>
-<%=f.label "Choose Your Tortilla" %> <br>
-<%=f.collection_select(:ingredient_ids, Ingredient.category("tortilla"), :id, :name)%><br>
+  <%=f.label "Choose Your Tortilla" %> <br>
+  <%=f.collection_select(:tortilla, Ingredient.category("tortilla"), :id, :name)%><br>
+
+  <%=f.label "Choose Your Beans" %><br>
+  <%=f.collection_select(:bean, Ingredient.category("bean"), :id, :name)%><br>
+
+  <%=f.label "Choose Your Protein" %><br>
+  <%=f.collection_select(:protein, Ingredient.category("protein"), :id, :name)%> <br>
+
+  <%=f.label "Choose Your Toppings" %><br>
+  <%=f.collection_check_boxes(:toppings,Ingredient.category("topping"), :id, :name)%><br>
+
+  <%=f.label "Choose Your Sauce" %><br>
+  <%=f.collection_check_boxes(:sauces, Ingredient.category("sauce"), :id, :name)%><br>
 
 
-<%=f.label "Choose Your Beans" %><br>
-<%=f.collection_select(:ingredient_ids, Ingredient.category("bean"), :id, :name)%><br>
-
-<%=f.label "Choose Your Protein" %><br>
-<%=f.collection_select(:ingredient_ids, Ingredient.category("protein"), :id, :name)%> <br>
-
-<%=f.label "Choose Your Toppings" %><br>
-<%=collection_check_boxes(:ingredients, :ingredient_id, Ingredient.category("topping"), :id, :name)%><br>
-
-<%=f.label "Choose Your Sauce" %><br>
-<%=collection_check_boxes(:ingredients, :ingredient_id, Ingredient.category("sauce"), :id, :name)%><br>
-
-
-
-
-
-
-
-<%=f.submit%>
+  <%=f.submit%>
 <% end  %>
-I
