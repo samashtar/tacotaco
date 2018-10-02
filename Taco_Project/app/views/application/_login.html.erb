@@ -1,0 +1,24 @@
+<style>
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+
+  .wrapper>div {
+    padding: 20px
+  }
+</style>
+
+<div class="wrapper">
+  <div class="login">
+    <h2>Login?</h2>
+    <%= render partial: 'sessions/form' %>
+  </div>
+
+  <div class="create_account">
+    <h2><%= link_to "Create an account?", new_user_path%></h2>
+  </div>
+</div>
