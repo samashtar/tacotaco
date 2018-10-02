@@ -89,4 +89,52 @@ User Controller
 Taco Controller
 Ingredient Controller
 Location Controller
-Category Controller 
+Category Controller
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Make Your Perfect Taco </h1>
+
+
+<%=form_for @taco do |f|%>
+<%=f.label "Choose Your Tortilla" %> <br>
+<%=collection_select(:ingredient_ids, Ingredient.category("tortilla"), :id, :name)%><br>
+
+<%=f.label "Choose Your Beans" %><br>
+<%=f.collection_select(:ingredient_ids, Ingredient.category("bean"), :id, :name)%><br>
+
+<%=f.label "Choose Your Protein" %><br>
+<%=f.collection_select(:ingredient_ids, Ingredient.category("protein"), :id, :name)%> <br>
+
+<%=f.label "Choose Your Toppings" %><br>
+<%=f.collection_check_boxes(:ingredient_ids,Ingredient.category("topping"), :id, :name)%><br>
+
+<%=f.label "Choose Your Sauce" %><br>
+<%=f.collection_check_boxes(:ingredient_ids, Ingredient.category("sauce"), :id, :name)%><br>
+
+<%=f.submit%>
+<% end  %>
+
+
+
+
+
+params {
+  taco: {
+    name: "Whatever",
+    protein: 4,
+    tortilla: 1,
+    bean: 3,
+    toppings: [1, 2],
+    sauces: [4, 5]
+  }
+}
