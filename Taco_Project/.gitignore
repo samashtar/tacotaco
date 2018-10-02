@@ -1,6 +1,7 @@
-Taco_Project/db/development.sqlite3
-Taco_Project/log/development.log
-Taco_Project/tmp/
+/db/development.sqlite3
+/log/development.log
+/tmp/
+/tmp
 Taco_Project/tmp/cache/assets/sprockets/v3.0/61/61DYE6KWkT0kZHOqhoDyZVE-tFnswqDzUluEf04Z9qI.cache
 Taco_Project/tmp/cache/assets/sprockets/v3.0/99/99m8UCKl4j8IpsVOK8ltLHyNh8Ae0nHw3GBkC34V_co.cache
 Taco_Project/tmp/cache/assets/sprockets/v3.0/B4/B43LeT9Wba4fLvXw-C_kKq-x9HwYZxnBBiltbIufzzQ.cache

@@ -16,4 +16,17 @@ class User < ApplicationRecord
   #   return nil unless (salt + hashed) == self.password_digest
   # end
 
+
+    def total
+      total = 0
+  self.tacos.each do |taco|
+      taco.ingredients.each do |ingredient|
+        total += ingredient.price
+    end
+    end
+    total
+    end
+
+
+
 end

@@ -1,22 +1,16 @@
 class TacosController < ApplicationController
 
-def index
-@user = User.find_by(session[:username])
-@tacos = @user.tacos
-end
-
-
 def new
+  @user = User.find(1)
   @taco = Taco.new
-  @user = User.find_by(session[:username])
 end
 
 def create
   @user = User.find_by(session[:username])
   @taco = Taco.create(ingredient_ids:params[:ingredients][:ingredient_id].compact)
-  @user.tacos << @taco 
+  @user.tacos << @taco
   if @taco.valid?
-    redirect_to @taco
+    redirect_to orders_path
   else
     redirect_to :new
   end
