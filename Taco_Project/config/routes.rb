@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get '/', to: 'application#index'
   get '/logout', to: 'sessions#destroy'
 
+  get '/delete_taco', to: 'tacos#destroy'
+
   get '/finalize', to: 'orders#finalize'
 
 end

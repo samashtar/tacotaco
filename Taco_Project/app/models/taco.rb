@@ -1,10 +1,13 @@
 class Taco < ApplicationRecord
 
-
   has_many :taco_ingredients
   has_many :user_tacos
   has_many :ingredients, through: :taco_ingredients
   has_many :users, through: :user_tacos
+
+  def generate_name
+    "#{first_item_name("sauces")} #{first_item_name("protein")} Taco with #{first_item_name("toppings")}"
+  end
 
   def taco_price
     total = 0
@@ -18,7 +21,7 @@ class Taco < ApplicationRecord
 
   def protein
     self.ingredients.select do |ingredient|
-      ingredient.category.name == "protein"
+      ingredient.category_name == "protein"
     end
   end
 
@@ -28,7 +31,7 @@ class Taco < ApplicationRecord
 
   def bean
     self.ingredients.select do |ingredient|
-      ingredient.category.name == "bean"
+      ingredient.category_name == "bean"
     end
   end
 
@@ -38,7 +41,7 @@ class Taco < ApplicationRecord
 
   def tortilla
     self.ingredients.select do |ingredient|
-      ingredient.category.name == "tortilla"
+      ingredient.category_name == "tortilla"
     end
   end
 
@@ -60,7 +63,7 @@ class Taco < ApplicationRecord
 
   def toppings
     self.ingredients.select do |ingredient|
-      ingredient.category.name == "topping"
+      ingredient.category_name == "topping"
     end
   end
 
@@ -68,6 +71,10 @@ class Taco < ApplicationRecord
     array_of_ids.reject(&:blank?).each do |id|
       self.ingredients << Ingredient.find(id)
     end
+  end
+
+  def first_item_name(ingredient_type)
+    self.send(ingredient_type)[0].name.capitalize
   end
 
 end
