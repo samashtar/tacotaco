@@ -8,9 +8,8 @@ class SessionsController < ApplicationController
     if !params[:username].nil? && !params[:username].empty?
       @user = User.find_by(username: params[:username])
       if @user.valid?
-        byebug
         return head(:forbidden) unless @user.authenticate(params[:password])
-        session[:username] = @user.username
+        session[:user_id] = @user.id
         redirect_to user_path(@user)
       else
         redirect_to '/login'
@@ -21,7 +20,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.delete[:username]
+    session.delete[:user_id]
     redirect_to '/login'
   end
 
