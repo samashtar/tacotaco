@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def index
-    
+
   end
 
   def current_user
@@ -13,5 +13,8 @@ class ApplicationController < ActionController::Base
       redirect_to login_path and return
     end
   end
+
+
+
 
 end
