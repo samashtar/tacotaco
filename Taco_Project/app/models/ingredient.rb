@@ -10,9 +10,4 @@ class Ingredient < ApplicationRecord
     select{|ingredient| ingredient.category_name == name}
   end
 
-
-
-
-
-
 end

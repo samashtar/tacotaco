@@ -8,10 +8,19 @@ def new
 end
 
 def create
+  # byebug
   @user = current_user
-  @taco = Taco.create(ingredient_ids:params[:ingredients][:ingredient_id].compact)
-  @user.tacos << @taco
+  # @ingredient_ids = []
+  # @ingredient_ids << params[:taco][:tortillas]
+  # @ingredient_ids += params[:taco][:sauces]
+  # @ingredient_ids << params[:taco][:beans]
+  # @ingredient_ids << params[:taco][:proteins]
+  # @ingredient_ids += params[:taco][:toppings]
+  @taco = Taco.new(taco_params)
   if @taco.valid?
+    @taco.save
+    @user.tacos << @taco
+    @user.save
     redirect_to orders_path
   else
     redirect_to :new
@@ -28,7 +37,7 @@ end
 
 def update
   @taco = Taco.find(params[:id])
-  @taco.update(ingredient_ids:params[:ingredients][:ingredient_id].compact)
+  @taco.update(ingredients:params[:ingredients][:ingredient_id].compact)
   if @taco.valid?
       redirect_to @taco
     else
@@ -47,6 +56,15 @@ end
 private
 
 def taco_params
+  params.require(:taco).permit(
+    :tortilla,
+    :bean,
+    :protein,
+    sauces:[],
+    toppings:[]
+  )
+
 end
+
 
 end
