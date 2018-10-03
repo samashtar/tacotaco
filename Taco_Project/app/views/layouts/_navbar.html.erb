@@ -1,20 +1,62 @@
 <style>
-  .navbar {
-    background-color: purple;
-    color: white;
-  }
+.sidenav {
+    margin-top: -50px;
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    top: 30px;
+    left: 20px;
+    padding: 8px 0;
+    border-width: 5px;
+}
 
-  .navbar a {
-    color: white;
-  }
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #2196F3;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #064579;
+}
+.nav {
+display: block;
+}
+.nav-item {
+  margin-left: -30px;
+  width: 170px;
+  padding: 20px;
+  border: 2px solid black;
+  margin-bottom: 2px;
+}
+.nav-item:hover{
+  background: #eee;
+}
+.title {
+font-family: 'Pacifico', cursive;
+margin-top: -50px;
+margin-bottom: 20px;
+
+}
 </style>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+</head>
 
 
-<nav class="navbar">
-  <ul>
+<body>
+<div class="sidenav">
+  <%=image_tag "1012187_1.jpg", :size => "200x200"%>
+  <h1 class ="title" id="logincenter">TACOCAT</h1>
+<nav class="nav">
+  <ul class="nav-primary-links">
     <li class="nav-item"><a href="/about">About</a></li>
     <li class="nav-item"><a href="/orders">Order</a></li>
     <li class="nav-item"><a href="/locations">Locations</a></li>
     <li class="nav-item"><a href="/logout">Logout</a></li>
   </ul>
 </nav>
+</div>
+</body>
