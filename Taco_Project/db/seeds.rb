@@ -93,14 +93,13 @@ users = [
 
 users.each {|user| User.create(user)}
 
+cheese = Ingredient.find_by(name: "cheese")
+chicken = Ingredient.find_by(name: "chicken")
+black_beans = Ingredient.find_by(name: "black")
+tomato = Ingredient.find_by(name: "tomato")
 
 tacoboutit =  Taco.create(name: "Taco 'bout it'")
 lost_in_the_sauce = Taco.create(name: "Lost in the Sauce")
 beanormous = Taco.create(name: "Beanormous")
 cheese_louise = Taco.create(name: "Cheese Louise")
-macho_taco = Taco.create(name: "Macho Taco")
-
-cheese = Ingredient.find_by(name: "cheese")
-chicken = Ingredient.find_by(name: "chicken")
-black_beans = Ingredient.find_by(name: "black")
-tomato = Ingredient.find_by(name: "tomato")
+macho_taco = Taco.create(name: "Macho Taco", protein: chicken.id, toppings: [cheese.id, tomato.id], bean: black_beans.id)

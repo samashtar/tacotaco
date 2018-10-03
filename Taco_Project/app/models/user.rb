@@ -31,4 +31,8 @@ class User < ApplicationRecord
     location.name
   end
 
+  def favorite_protein
+    tacos.map{|taco| taco.protein_name}
+  end
+
 end
