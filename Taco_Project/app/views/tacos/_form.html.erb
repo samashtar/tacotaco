@@ -3,6 +3,9 @@
   <%=f.label "Choose Your Tortilla" %> <br>
   <%=f.collection_select(:tortilla, Ingredient.category("tortilla"), :id, :name)%><br>
 
+  <%=f.label "Choose Your Rice" %> <br>
+  <%=f.collection_select(:rice, Ingredient.category("rice"), :id, :name)%><br>
+
   <%=f.label "Choose Your Beans" %><br>
   <%=f.collection_select(:bean, Ingredient.category("bean"), :id, :name)%><br>
 

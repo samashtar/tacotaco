@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   get '/delete_taco', to: 'tacos#destroy'
 
   get '/finalize', to: 'orders#finalize'
+  get '/finalized', to: 'orders#finalized'
 
 end

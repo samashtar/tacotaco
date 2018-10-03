@@ -9,7 +9,8 @@ categories = [
   {name: "topping"},
   {name: "tortilla"},
   {name: "sauce"},
-  {name: "bean"}
+  {name: "bean"},
+  {name: "rice"}
 ]
 
 categories.each {|category| Category.create(category)}
@@ -18,15 +19,20 @@ ingredients = [
   {name: "lettuce", price: 0, calories: 0, category_id: Category.find_by(name: "topping").id},
   {name: "cheese", price: 0, calories: 0, category_id: Category.find_by(name: "topping").id},
   {name: "tomato", price: 0, calories: 0, category_id: Category.find_by(name: "topping").id},
+  {name: "guacamole", price: .25, calories: 0, category_id: Category.find_by(name: "topping").id},
+  {name: "fajita veggies", price: 0, calories: 0, category_id: Category.find_by(name: "topping").id},
+  {name: "queso", price: .25, calories: 0, category_id: Category.find_by(name: "topping").id},
+  {name: "corn", price: 0, calories: 0, category_id: Category.find_by(name: "topping").id},
 
   {name: "beef", price: 0, calories: 0, category_id: Category.find_by(name: "protein").id},
   {name: "chicken", price: 0, calories: 0, category_id: Category.find_by(name: "protein").id},
+  {name: "chorizo", price: 0, calories: 0, category_id: Category.find_by(name: "protein").id},
   {name: "tofu", price: 0, calories: 0, category_id: Category.find_by(name: "protein").id},
 
   {name: "multigrain", price: 0, calories: 0, category_id: Category.find_by(name: "tortilla").id},
   {name: "white", price: 0, calories: 0, category_id: Category.find_by(name: "tortilla").id},
   {name: "corn", price: 0, calories: 0, category_id: Category.find_by(name: "tortilla").id},
-  {name: "gluten free", price: 0, calories: 0, category_id: Category.find_by(name: "tortilla").id},
+  {name: "gluten free", price: .25, calories: 0, category_id: Category.find_by(name: "tortilla").id},
 
   {name: "mild", price: 0, calories: 0, category_id: Category.find_by(name: "sauce").id},
   {name: "medium", price: 0, calories: 0, category_id: Category.find_by(name: "sauce").id},
@@ -34,6 +40,9 @@ ingredients = [
 
   {name: "black", price: 0, calories: 0, category_id: Category.find_by(name: "bean").id},
   {name: "pinto", price: 0, calories: 0, category_id: Category.find_by(name: "bean").id}
+
+  {name: "brown rice", price: 0, calories: 0, category_id: Category.find_by(name: "rice").id},
+  {name: "white rice", price: 0, calories: 0, category_id: Category.find_by(name: "rice").id},
 ]
 
 ingredients.each {|ingredient| Ingredient.create(ingredient)}

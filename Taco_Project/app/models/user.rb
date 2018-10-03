@@ -7,6 +7,7 @@ class User < ApplicationRecord
   def total
     total = 0
     active_tacos.each do |taco|
+      total += 1
       taco.ingredients.each do |ingredient|
         total += ingredient.price
       end
@@ -22,6 +23,7 @@ class User < ApplicationRecord
     active_tacos.map do |taco|
       taco.order_status = false
       taco.save
+      self.taco_points += 1
     end
   end
 

@@ -10,7 +10,7 @@ class Taco < ApplicationRecord
   end
 
   def taco_price
-    total = 0
+    total = 1
       self.ingredients.each do |ingredient|
         total += ingredient.price
       end
@@ -46,6 +46,16 @@ class Taco < ApplicationRecord
   end
 
   def tortilla=(id)
+    self.ingredients << Ingredient.find(id)
+  end
+
+  def rice
+    self.ingredients.select do |ingredient|
+      ingredient.category_name == "rice"
+    end
+  end
+
+  def rice=(id)
     self.ingredients << Ingredient.find(id)
   end
 

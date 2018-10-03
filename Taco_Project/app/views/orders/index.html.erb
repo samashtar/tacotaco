@@ -2,9 +2,8 @@
 
 <% @user.active_tacos.each do |taco| %>
 
-  <h3><%= taco.generate_name %> (<%=link_to("EDIT", edit_taco_path(taco))%>,
+  <h3><%= taco.generate_name %> - $<%= taco.taco_price %> - (<%=link_to("EDIT", edit_taco_path(taco))%>,
     <%=link_to("DELETE", taco_path(taco.id), method: :delete)%>)</h3>
-  <h3>Price: $<%= taco.taco_price %></h3>
 
 <% end %>
 
