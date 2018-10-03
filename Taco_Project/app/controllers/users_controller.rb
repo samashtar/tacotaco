@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action(:find_user, only: [:show])
+  before_action(:find_user, only: [:show, :edit, :update])
 
   def new
     @user = User.new
@@ -20,10 +20,23 @@ class UsersController < ApplicationController
   def show
   end
 
+  def edit
+    @locations = Location.all
+  end
+
+  def update
+    @user.update(user_params)
+    redirect_to user_path(@user)
+  end
+
+  def create
+
+  end
+
   private
 
   def find_user
-    @user = User.find_by(username: session[:username])
+    @user = User.find(session[:user_id])
   end
 
   def user_params

@@ -1,8 +1,11 @@
 <h1>Your Current Order </h1>
+<ul>
 <% @user.tacos.each_with_index do |taco, index|%>
   <% indexplusone = index + 1 %>
-   <%= "Taco ##{indexplusone}" %>
-<h3>Taco Price: $<%= taco.taco_price %> </h3>
+  <li><%= taco.generate_name %> |</li>
+  <li>Price: $<%= taco.taco_price %> </li><br>
 <% end %>
-<h3><%=link_to "Edit Your Order", orders_path%></h3>
+</ul>
 <h3>Total Order Cost: $<%=@user.total %></h3>
+
+<h2>Thank you for ordering!</h2>

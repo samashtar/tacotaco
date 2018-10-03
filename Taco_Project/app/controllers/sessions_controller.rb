@@ -16,7 +16,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    current_user.tacos = []
+    current_user.deactivate_tacos
+    current_user.save
     session[:user_id] = nil
     redirect_to '/'
   end
