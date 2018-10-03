@@ -31,8 +31,9 @@ class User < ApplicationRecord
     location.name
   end
 
-  def favorite_protein
-    tacos.map{|taco| taco.protein_name}
+  def favorite_(category)
+    array = tacos.map{|taco| taco.item_name(category)}
+    array.delete_if(&:blank?).max_by{|ingredient| array.count(ingredient)}
   end
 
 end
