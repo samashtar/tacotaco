@@ -6,11 +6,29 @@ class Taco < ApplicationRecord
   has_many :users, through: :user_tacos
 
   def generate_name
-    "#{first_item_name("sauces")} #{first_item_name("protein")} Taco with #{first_item_name("toppings")}"
+    string = ""
+    if self.has?("sauce")
+      string = string + "#{item_name("sauces")} "
+    end
+
+    if self.has?("protein")
+      string = string + "#{item_name("protein")} "
+    end
+
+    string = string + "Taco"
+
+    if self.has?("topping")
+      string = string + " with #{item_name("toppings")}"
+    end
+    string
+  end
+
+  def has?(category)
+    !ingredients.select{|ingredient| ingredient.category_name == category}.empty?
   end
 
   def taco_price
-    total = 0
+    total = 1
       self.ingredients.each do |ingredient|
         total += ingredient.price
       end
@@ -27,6 +45,10 @@ class Taco < ApplicationRecord
 
   def protein=(id)
     self.ingredients << Ingredient.find(id)
+  end
+
+  def protein_name
+    protein[0].name
   end
 
   def bean
@@ -46,6 +68,16 @@ class Taco < ApplicationRecord
   end
 
   def tortilla=(id)
+    self.ingredients << Ingredient.find(id)
+  end
+
+  def rice
+    self.ingredients.select do |ingredient|
+      ingredient.category_name == "rice"
+    end
+  end
+
+  def rice=(id)
     self.ingredients << Ingredient.find(id)
   end
 
@@ -73,8 +105,8 @@ class Taco < ApplicationRecord
     end
   end
 
-  def first_item_name(ingredient_type)
-    self.send(ingredient_type)[0].name.capitalize
+  def item_name(ingredient_type)
+    self.send(ingredient_type.to_sym)[0].name.capitalize
   end
 
 end

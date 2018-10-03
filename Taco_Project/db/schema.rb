@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_03_130053) do
+ActiveRecord::Schema.define(version: 2018_10_03_182200) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2018_10_03_130053) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
-    t.integer "price"
+    t.decimal "price"
     t.integer "calories"
     t.integer "category_id"
     t.datetime "created_at", null: false

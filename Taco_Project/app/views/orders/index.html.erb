@@ -2,14 +2,13 @@
 
 <% @user.active_tacos.each do |taco| %>
 
-  <h3><%= taco.generate_name %> (<%=link_to("EDIT", edit_taco_path(taco))%>,
+  <h3><%= taco.generate_name %> - $<%= taco.taco_price %> - (<%=link_to("EDIT", edit_taco_path(taco))%>,
     <%=link_to("DELETE", taco_path(taco.id), method: :delete)%>)</h3>
-  <h3>Price: $<%= taco.taco_price %></h3>
 
 <% end %>
 
 <h3><%= link_to "Make a new taco", new_taco_path %></h3>
 
-<h3><%=link_to "Complete Your Order", finalize_path(@user) %></h3>
+<h3><%=link_to "Review Your Order", finalize_path(@user) %></h3>
 
 <h3>Total Order Cost: $<%=@user.total %></h3>

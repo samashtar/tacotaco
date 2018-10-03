@@ -52,6 +52,7 @@ class TacosController < ApplicationController
       :tortilla,
       :bean,
       :protein,
+      :rice,
       sauces:[],
       toppings:[]
     )

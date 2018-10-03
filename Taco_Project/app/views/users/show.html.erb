@@ -1,13 +1,20 @@
 <h1>Welcome, <%= @user.name %></h1>
 
+<h2>Your Details</h2>
+
 <ul>
   <li>Username: <%=@user.username%></li><br>
   <li>Email: <%=@user.email%></li><br>
   <li>Address: <%=@user.address%></li><br>
   <li>Phone Number: <%=@user.phone_number%></li><br>
   <li>Favorite Store: <%=@user.location_name%></li><br>
+  <li>TACOCAT Points: <%=@user.taco_points%></li><br>
 </ul>
 
-<h2><%=link_to "Edit your profile", edit_user_path(@user)%></h2>
+<h3><%=link_to "Edit your profile", edit_user_path(@user)%></h3>
+
+<h2>Your Taco Analytics</h2>
+
+
 
 <h3><%=link_to "Return to index", edit_user_path(@user)%></h3>

@@ -2,15 +2,12 @@
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
 
-
-<h1 class ="title" id="logincenter">TACOCAT</h1>
-<%=image_tag "Taco_Cat.gif"%>
-
 <% if current_user %>
   <%= render partial: 'homepage', locals: {user: current_user} %>
 <% else %>
   <%= render partial: 'login' %>
 <% end %>
+
 
 <style media="screen">
 

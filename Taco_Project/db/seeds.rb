@@ -9,7 +9,8 @@ categories = [
   {name: "topping"},
   {name: "tortilla"},
   {name: "sauce"},
-  {name: "bean"}
+  {name: "bean"},
+  {name: "rice"}
 ]
 
 categories.each {|category| Category.create(category)}
@@ -18,22 +19,30 @@ ingredients = [
   {name: "lettuce", price: 0, calories: 0, category_id: Category.find_by(name: "topping").id},
   {name: "cheese", price: 0, calories: 0, category_id: Category.find_by(name: "topping").id},
   {name: "tomato", price: 0, calories: 0, category_id: Category.find_by(name: "topping").id},
+  {name: "guacamole", price: 0.25, calories: 0, category_id: Category.find_by(name: "topping").id},
+  {name: "fajita veggies", price: 0, calories: 0, category_id: Category.find_by(name: "topping").id},
+  {name: "queso", price: 0.25, calories: 0, category_id: Category.find_by(name: "topping").id},
+  {name: "corn", price: 0, calories: 0, category_id: Category.find_by(name: "topping").id},
 
   {name: "beef", price: 0, calories: 0, category_id: Category.find_by(name: "protein").id},
   {name: "chicken", price: 0, calories: 0, category_id: Category.find_by(name: "protein").id},
+  {name: "chorizo", price: 0, calories: 0, category_id: Category.find_by(name: "protein").id},
   {name: "tofu", price: 0, calories: 0, category_id: Category.find_by(name: "protein").id},
 
   {name: "multigrain", price: 0, calories: 0, category_id: Category.find_by(name: "tortilla").id},
   {name: "white", price: 0, calories: 0, category_id: Category.find_by(name: "tortilla").id},
   {name: "corn", price: 0, calories: 0, category_id: Category.find_by(name: "tortilla").id},
-  {name: "gluten free", price: 0, calories: 0, category_id: Category.find_by(name: "tortilla").id},
+  {name: "gluten free", price: 0.25, calories: 0, category_id: Category.find_by(name: "tortilla").id},
 
   {name: "mild", price: 0, calories: 0, category_id: Category.find_by(name: "sauce").id},
   {name: "medium", price: 0, calories: 0, category_id: Category.find_by(name: "sauce").id},
   {name: "hot", price: 0, calories: 0, category_id: Category.find_by(name: "sauce").id},
 
   {name: "black", price: 0, calories: 0, category_id: Category.find_by(name: "bean").id},
-  {name: "pinto", price: 0, calories: 0, category_id: Category.find_by(name: "bean").id}
+  {name: "pinto", price: 0, calories: 0, category_id: Category.find_by(name: "bean").id},
+
+  {name: "brown rice", price: 0, calories: 0, category_id: Category.find_by(name: "rice").id},
+  {name: "white rice", price: 0, calories: 0, category_id: Category.find_by(name: "rice").id},
 ]
 
 ingredients.each {|ingredient| Ingredient.create(ingredient)}
@@ -84,14 +93,13 @@ users = [
 
 users.each {|user| User.create(user)}
 
+cheese = Ingredient.find_by(name: "cheese")
+chicken = Ingredient.find_by(name: "chicken")
+black_beans = Ingredient.find_by(name: "black")
+tomato = Ingredient.find_by(name: "tomato")
 
 tacoboutit =  Taco.create(name: "Taco 'bout it'")
 lost_in_the_sauce = Taco.create(name: "Lost in the Sauce")
 beanormous = Taco.create(name: "Beanormous")
 cheese_louise = Taco.create(name: "Cheese Louise")
-macho_taco = Taco.create(name: "Macho Taco")
-
-cheese = Ingredient.find_by(name: "cheese")
-chicken = Ingredient.find_by(name: "chicken")
-black_beans = Ingredient.find_by(name: "black")
-tomato = Ingredient.find_by(name: "tomato")
+macho_taco = Taco.create(name: "Macho Taco", protein: chicken.id, toppings: [cheese.id, tomato.id], bean: black_beans.id)
