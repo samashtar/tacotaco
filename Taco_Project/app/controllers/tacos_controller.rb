@@ -1,5 +1,7 @@
 class TacosController < ApplicationController
 
+  before_action(:find_taco, only: [:show, :edit, :update, :destroy])
+
   def new
     @user = current_user
     @taco = Taco.new
@@ -20,15 +22,12 @@ class TacosController < ApplicationController
   end
 
   def show
-    @taco = Taco.find(params[:id])
   end
 
   def edit
-    @taco = Taco.find(params[:id])
   end
 
   def update
-    @taco = Taco.find(params[:id])
     @taco.update(taco_params)
     if @taco.valid?
       redirect_to @taco
@@ -38,12 +37,15 @@ class TacosController < ApplicationController
   end
 
   def destroy
-    @taco = Taco.find(params[:id])
     @taco.destroy
     redirect_to orders_path
   end
 
   private
+
+  def find_taco
+    @taco = Taco.find(params[:id])
+  end
 
   def taco_params
     params.require(:taco).permit(
