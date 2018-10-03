@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.valid?
       @user.save
+      session[:user_id] = @user.id
       redirect_to '/'
     else
       redirect_to new_user_path
@@ -27,10 +28,6 @@ class UsersController < ApplicationController
   def update
     @user.update(user_params)
     redirect_to user_path(@user)
-  end
-
-  def create
-
   end
 
   private
