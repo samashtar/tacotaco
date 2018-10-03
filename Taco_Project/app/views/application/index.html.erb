@@ -1,7 +1,32 @@
-<h1>Welcome to our Taco App</h1>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+</head>
+
+
+<h1 class ="title" id="logincenter">TACOCAT</h1>
+<%=image_tag "Taco_Cat.gif"%>
 
 <% if current_user %>
   <%= render partial: 'homepage', locals: {user: current_user} %>
 <% else %>
   <%= render partial: 'login' %>
 <% end %>
+
+<style media="screen">
+
+img {
+  display: block;
+   margin-left: auto;
+   margin-right: auto;
+  max-width: 100%;
+     height: auto;
+}
+
+.title {
+font-family: 'Pacifico', cursive;
+margin-top: 85px;
+margin-bottom: 30px;
+
+}
+
+</style>
