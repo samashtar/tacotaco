@@ -19,7 +19,10 @@ class User < ApplicationRecord
   end
 
   def deactivate_tacos
-    self.tacos.map{|taco| taco.order_status = false}
+    self.active_tacos.map do |taco|
+      taco.order_status = false
+      taco.save
+    end
   end
 
 end
