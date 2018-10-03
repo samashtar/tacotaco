@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   def total
     total = 0
-    self.active_tacos.each do |taco|
+    active_tacos.each do |taco|
       taco.ingredients.each do |ingredient|
         total += ingredient.price
       end
@@ -15,14 +15,18 @@ class User < ApplicationRecord
   end
 
   def active_tacos
-    self.tacos.select{|taco| taco.order_status == true}
+    tacos.select{|taco| taco.order_status == true}
   end
 
   def deactivate_tacos
-    self.active_tacos.map do |taco|
+    active_tacos.map do |taco|
       taco.order_status = false
       taco.save
     end
+  end
+
+  def location_name
+    location.name
   end
 
 end
