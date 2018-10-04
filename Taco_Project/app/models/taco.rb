@@ -47,10 +47,6 @@ class Taco < ApplicationRecord
     self.ingredients << Ingredient.find(id)
   end
 
-  def protein_name
-    protein[0].name
-  end
-
   def bean
     self.ingredients.select do |ingredient|
       ingredient.category_name == "bean"
@@ -106,7 +102,11 @@ class Taco < ApplicationRecord
   end
 
   def item_name(ingredient_type)
-    self.send(ingredient_type.to_sym)[0].name.capitalize
+    if !self.send(ingredient_type.to_sym)[0].nil?
+      self.send(ingredient_type.to_sym)[0].name.capitalize
+    else
+      ""
+    end
   end
 
 end
