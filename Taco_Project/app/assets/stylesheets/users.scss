@@ -1,3 +1,35 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+    .wrapper>div {
+      padding: 20px
+    }
+
+    .create_account {
+      padding: 20px;
+      font-size: 10px;
+    }
+    .login {
+
+    }
+
+    img {
+      display: block;
+       margin-left: auto;
+       margin-right: auto;
+      max-width: 100%;
+         height: auto;
+    }
+
+    .title {
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 30px;
+    font-size: 36px;
+
+    }
+
+    .giant_wrapper {
+      margin-top: 85px;
+    }

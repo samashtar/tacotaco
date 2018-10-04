@@ -1,123 +1,4 @@
-<style>
-/* .sidenav {
-    margin-top: -50px;
-    width: 180px;
-    position: fixed;
-    z-index: 1;
-    top: 30px;
-    left: 20px;
-    padding: 8px 0;
-    border-width: 5px;
-}
 
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #2196F3;
-    display: block;
-}
-
-.sidenav a:hover {
-    color: #064579;
-}
-.nav {
-display: block;
-}
-.nav-item {
-  margin-left: -30px;
-  width: 170px;
-  padding: 20px;
-  border: 2px solid black;
-  margin-bottom: 2px;
-}
-.nav-item:hover{
-  background: #eee;
-} */
-.title {
-font-family: 'Pacifico', cursive;
-margin-top: -50px;
-margin-bottom: 20px;
-}
-
-
-.nav-primary-links{
-    padding: 0;
-    margin: 20px auto;
-    width: 225px;
-
-}
-.nav-primary-links li{
-	width: 115px;
-	height: 75px;
-	overflow: hidden;
-	display: block;
-	background: #fff;
-	/* box-shadow: 1px 1px 2px rgba(0,0,0,0.2); */
-	margin-bottom: 4px;
-	/* border-left: 10px solid #FF3F69; */
-	transition: all 300ms ease-in-out;
-  font-size: 20px;
-  transition: all 300ms linear;
-}
-.nav-primary-links li:last-child{
-    margin-bottom: 0px;
-}
-.nav-primary-links li a{
-    text-align: left;
-    display: block;
-    width: 100%;
-    height: 100%;
-    color: #000;
-    position:relative;
-}
-
-.nav-primary-links li:hover{
-    /* border-color: #fff004; */
-    color: #fff;
-}
-.nav-item:hover {
-    color: #fff;
-    /* text-shadow: 0px 0px 1px #fff004; */
-    font-size: 30px;
-}
-.sidenav{
-  font-family: 'Oswald', sans-serif;
-    font-size: 20px;
-    /* text-shadow: 0px 0px 1px #333; */
-    line-height: 90px;
-    position: absolute;
-    width: 90px;
-    left: 20px;
-    text-align: center;
-    transition: all 300ms linear;
-    position: absolute;
-    left: 120px;
-    width: 370px;
-    height: 60px;
-    top: 20px;
-}
-
-.social {
-margin-top: -50px;
-margin-bottom: -50px;
-}
-.fa-facebook{
-  color: #3A5CA9;
-}
-.fa-youtube{
-  color: #FF0001;
-}
-.fa-instagram{
-  color: #DE5D80;
-}
-.fa-snapchat{
-  color: black;
-}
-.fa-spotify{
-  color: #1DD155;
-}
-</style>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -126,30 +7,101 @@ margin-bottom: -50px;
 
 
 <body>
-<div class="sidenav">
-  <%=image_tag "1012187_1.jpg", :size => "200x200"%>
-  <h1 class ="title" id="logincenter" class="indexcat">TACOCAT</h1>
-  <div class="social">
-    <a href="#" class="fa fa-facebook"></a>
-    <a href="#" class="fa fa-twitter"></a>
-    <a href="#" class="fa fa-youtube"></a>
-    <a href="#" class="fa fa-snapchat"></a>
-    <a href="#" class="fa fa-instagram"></a>
-    <a href="#" class="fa fa-spotify"></a>
+  <div class="container-fluid">
+    <div class="sidenav">
+        <%=image_tag "1012187_1.jpg", :size => "200x200"%>
+        <h1 class ="title" id="logincenter" class="indexcat">TACOCAT</h1>
+      <div class="social">
+          <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-facebook" target="_blank"></a>
+          <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-twitter" target="_blank"></a>
+          <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-youtube" target="_blank"></a>
+          <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-snapchat" target="_blank"></a>
+          <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-instagram" target="_blank"></a>
+          <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-spotify" target="_blank"></a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-primary-links">
+          <li class="nav-item"><a href="/">Home</a></li>
+          <li class="nav-item"><a href="<%=user_path(current_user)%>">Profile</a></li>
+          <li class="nav-item"><a href="/about">About</a></li>
+          <li class="nav-item"><a href="/orders">Order</a></li>
+          <li class="nav-item"><a href="/locations">Locations</a></li>
+          <li class="nav-item"><a href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
-<nav class="nav">
-  <ul class="nav-primary-links">
-    <li class="nav-item"><a href="/">Home</a></li>
-    <li class="nav-item"><a href="<%=user_path(current_user)%>">Profile</a></li>
-    <li class="nav-item"><a href="/about">About</a></li>
-    <li class="nav-item"><a href="/orders">Order</a></li>
-    <li class="nav-item"><a href="/locations">Locations</a></li>
-    <li class="nav-item"><a href="/logout">Logout</a></li>
 
 
-  </ul>
-</nav>
-</div>
+
+  <!-- Footer -->
+  <footer id="footer" class="page-footer font-small blue pt-4">
+
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-md-6 mt-md-0 mt-3">
+
+            <!-- Content -->
+            <h5 class="text-uppercase"></h5>
+            <p>Cats always land on their feet. Catapulting them with your delivery ensures the fastest
+              delivery on the planet.<br>
+              Hot and fresh, straight out of our kitchen!
+            </p>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none pb-3">
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+
+              <!-- Links -->
+              <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!">Hey</a>
+                </li>
+                <li>
+                  <a href="#!">There</a>
+                </li>
+                <li>
+                  <a href="#!">:)</a>
+                </li>
+                <li>
+                </li>
+              </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a href="https://mdbootstrap.com/bootstrap-tutorial/">Tacocat.com <br>
+        All Rights Reserved.</a>
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+
 </body>
 
 
