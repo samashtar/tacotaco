@@ -3,6 +3,8 @@ class Ingredient < ApplicationRecord
   has_many :taco_ingredients
   has_many :tacos, through: :taco_ingredients
   validates :name, presence: true
+  validates :calories, numericality: true
+  validates :price, numericality: true
 
   # CLASS METHODS
 
