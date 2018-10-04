@@ -19,4 +19,8 @@ Rails.application.routes.draw do
   get '/finalize', to: 'orders#finalize'
   get '/finalized', to: 'orders#finalized'
 
+  get '/analytics', to: 'tacos#analytics'
+
+  post '/add_signature', to: 'orders#add_signature'
+
 end

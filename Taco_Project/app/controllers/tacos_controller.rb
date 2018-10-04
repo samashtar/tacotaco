@@ -1,11 +1,13 @@
 class TacosController < ApplicationController
 
   before_action(:find_taco, only: [:show, :edit, :update, :destroy])
+  before_action(:require_login)
 
   def new
     @user = current_user
     @taco = Taco.new
     @category = Category.all
+    @extras = Ingredient.extra_cost
   end
 
   def create
@@ -39,6 +41,10 @@ class TacosController < ApplicationController
   def destroy
     @taco.destroy
     redirect_to orders_path
+  end
+
+  def analytics
+    @tacos = Taco.all
   end
 
   private

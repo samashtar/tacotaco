@@ -5,22 +5,44 @@ class Taco < ApplicationRecord
   has_many :ingredients, through: :taco_ingredients
   has_many :users, through: :user_tacos
 
+  # CLASS METHODS
+
+  def self.most_popular(category)
+    array = all.map{|taco| taco.item_name(category)}
+    array.delete_if(&:blank?).max_by{|ingredient| array.count(ingredient)}
+  end
+
+  def self.average_calories
+    all.map{|taco| taco.calories}.delete_if(&:blank?).reduce(:+) / all.length.to_f
+  end
+
+  def self.signature_tacos
+    all.select{|taco| taco.signature == true}
+  end
+
+  # INSTANCE METHODS
+
+  def calories
+    self.ingredients.map{|i| i.calories}.reduce(:+) || 0
+  end
+
   def generate_name
-    string = ""
-    if self.has?("sauce")
-      string = string + "#{item_name("sauces")} "
+    if self.signature == true
+      self.name
+    else
+      string = ""
+      if self.has?("sauce")
+        string = string + "#{item_name("sauces")} "
+      end
+      if self.has?("protein")
+        string = string + "#{item_name("protein")} "
+      end
+      string = string + "Taco"
+      if self.has?("topping")
+        string = string + " with #{item_name("toppings")}"
+      end
+      string
     end
-
-    if self.has?("protein")
-      string = string + "#{item_name("protein")} "
-    end
-
-    string = string + "Taco"
-
-    if self.has?("topping")
-      string = string + " with #{item_name("toppings")}"
-    end
-    string
   end
 
   def has?(category)
@@ -102,6 +124,10 @@ class Taco < ApplicationRecord
   end
 
   def item_name(ingredient_type)
+    # Finds the taco's first ingredient of a category
+    # Category must be input as a string
+    # Outputs ingrdient name as a string
+    # Utilizes the custom getters defined above
     if !self.send(ingredient_type.to_sym)[0].nil?
       self.send(ingredient_type.to_sym)[0].name.capitalize
     else

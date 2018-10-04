@@ -1,3 +1,4 @@
 class Category < ApplicationRecord
-  has_many :ingredients 
+  has_many :ingredients
+  validates :name, presence: true
 end

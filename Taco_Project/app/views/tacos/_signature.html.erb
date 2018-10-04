@@ -1,0 +1,10 @@
+<p><%= signature.name %></p>
+<p>Calories: <%= signature.calories %></p>
+<p><%= signature.description %></p>
+<p>
+  <%= form_tag("/add_signature", method: :post) do%>
+    <%= hidden_field_tag(name="signature_id", value=signature.id)%>
+    <%= submit_tag("ADD TO ORDER")%>
+  <% end %>
+</p>
+<br>

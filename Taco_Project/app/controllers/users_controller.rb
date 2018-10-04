@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   before_action(:find_user, only: [:show, :edit, :update])
+  before_action(:require_login, only: [:show, :edit, :update])
 
   def new
     @user = User.new
@@ -14,7 +15,8 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to '/'
     else
-      redirect_to new_user_path
+      @locations = Location.all
+      render :new
     end
   end
 

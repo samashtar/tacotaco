@@ -4,6 +4,12 @@ class User < ApplicationRecord
   has_many :tacos, through: :user_tacos
   has_secure_password
 
+  validates :name, presence: true
+  validates :username, presence: true
+  validates :email, presence: true
+  validates :address, presence: true
+  validates :email, format: {with: /@/}
+
   def total
     total = 0
     active_tacos.each do |taco|
