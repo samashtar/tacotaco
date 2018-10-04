@@ -9,6 +9,8 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :address, presence: true
   validates :email, format: {with: /@/}
+  validates :phone_number, numericality: {only_integer: true}
+  validates :phone_number, length: {minimum: 10}
 
   def total
     total = 0
