@@ -124,10 +124,6 @@ class Taco < ApplicationRecord
   end
 
   def item_name(ingredient_type)
-    # Finds the taco's first ingredient of a category
-    # Category must be input as a string
-    # Outputs ingrdient name as a string
-    # Utilizes the custom getters defined above
     if !self.send(ingredient_type.to_sym)[0].nil?
       self.send(ingredient_type.to_sym)[0].name.capitalize
     else

@@ -6,4 +6,3 @@ STYLING
 BACKEND
 - coupons (Add coupon and apply coupon to order)
 - allow admin to edit locations
-- write specs
