@@ -7,20 +7,26 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update, :new, :create]
   resources :orders, only: [:index]
 
+  # APPLICATION CONTROLLER
   get '/about', to: 'application#about'
+    get '/', to: 'application#index'
 
+  # SESSIONS CONTROLLER
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
-  get '/', to: 'application#index'
   get '/logout', to: 'sessions#destroy'
 
-  get '/delete_taco', to: 'tacos#destroy'
-
+  # ORDERS CONTROLLER
   get '/finalize', to: 'orders#finalize'
   get '/finalized', to: 'orders#finalized'
+  post '/add_signature', to: 'orders#add_signature'
 
+  # TACOS CONTROLLER
+  get '/delete_taco', to: 'tacos#destroy'
   get '/analytics', to: 'tacos#analytics'
 
-  post '/add_signature', to: 'orders#add_signature'
+  # ERRORS
+
+  get '404', to: 'errors#notfound'
 
 end

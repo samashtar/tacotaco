@@ -9,6 +9,8 @@ gem 'rails', '~> 5.2.1'
 gem 'sqlite3'
 # For sending emails
 gem 'figaro'
+# For spec files
+gem 'rspec-rails'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
