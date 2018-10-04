@@ -22,10 +22,127 @@
  a {
    color: purple;
  }
-
-
-
-
 li {
   display:inline-block;
 }
+
+/* title */
+.title {
+font-family: 'Pacifico', cursive;
+margin-top: -50px;
+margin-bottom: 20px;
+font-size: 36px;
+
+}
+
+
+/* nav */
+.nav-primary-links{
+    padding: 0;
+    margin: 20px auto;
+    width: 225px;
+
+}
+.nav-primary-links li{
+	width: 115px;
+	height: 75px;
+	overflow: hidden;
+	display: block;
+	background: #fff;
+	/* box-shadow: 1px 1px 2px rgba(0,0,0,0.2); */
+	margin-bottom: 4px;
+	/* border-left: 10px solid #FF3F69; */
+	transition: all 300ms ease-in-out;
+  font-size: 20px;
+  transition: all 300ms linear;
+}
+.nav-primary-links li:last-child{
+    margin-bottom: 0px;
+}
+.nav-primary-links li a{
+    text-align: left;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    position:relative;
+}
+
+.nav-primary-links li:hover{
+    /* border-color: #fff004; */
+    color: #fff;
+}
+.nav-item:hover {
+    color: #fff;
+    /* text-shadow: 0px 0px 1px #fff004; */
+    font-size: 30px;
+}
+.sidenav{
+  font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    /* text-shadow: 0px 0px 1px #333; */
+    line-height: 90px;
+    position: absolute;
+    width: 90px;
+    left: 20px;
+    text-align: center;
+    transition: all 300ms linear;
+    position: absolute;
+    left: 120px;
+    width: 370px;
+    height: 60px;
+    top: 20px;
+    margin-bottom: 50px;
+}
+
+/* social medias */
+.social {
+margin-top: -50px;
+margin-bottom: -50px;
+z-index: 2;
+display: block;
+width:100%
+}
+.fa-facebook{
+  color: #3A5CA9;
+}
+.fa-youtube{
+  color: #FF0001;
+}
+.fa-instagram{
+  color: #DE5D80;
+}
+.fa-snapchat{
+  color: black;
+}
+.fa-spotify{
+  color: #1DD155;
+}
+
+
+/* footer */
+.page-footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #efefef;
+  text-align: center;
+  font-size: 10px;
+}
+.container-fluid{
+  margin-bottom: -50px;
+}
+
+.list-unstyled {
+  color: #efefef;
+}
+
+#footer {
+   position: fixed;
+   bottom:0;
+   width:100%;
+   height:85px;   /* Height of the footer */
+   background:#6cf;
+   display: block;
+ }

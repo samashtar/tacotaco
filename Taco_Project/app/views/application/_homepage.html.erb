@@ -1,33 +1,88 @@
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 
 <body>
-  <h2>Welcome <%= current_user.name %></h2>
-<!-- <script>
-var video = document.getElementById("myVideo");
-var btn = document.getElementById("myBtn");
+  <div class="index-carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <h2>Welcome <%= current_user.name %>!</h2>
 
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <%= image_tag("taco_pic_1.jpg",:size => "732x503")%>
+        </div>
+        <div class="item">
+          <%= image_tag("taco_pic_2.jpg",:size => "732x503")%>
+        </div>
+
+        <div class="item">
+          <%= image_tag("taco_pic_3.jpg",:size => "732x503")%>
+        </div>
+
+        <div class="item">
+          <%= image_tag("taco_pic_4.jpg",:size => "732x503")%>
+        </div>
+
+        <div class="item">
+          <%= image_tag("taco_pic_5.jpg",:size => "732x503")%>
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  </body>
+
+  <style media="screen">
+
+  /* !<----carousel --->! */
+
+    #myCarousel {
+  margin-left: 0px;
+  margin-top: 0px;
+  max-width: 1000px;
+  display: block;
+  overflow: hidden;
+
+    }
+  .carousel-control {
+    width: 0%;
+    color: #000;
+    opacity: 1;
   }
+  .carousel-control:hover {
+  }
+  .left {
+    margin-left: 100px;
+  }
+  .left:hover {
+  }
+  .right {
+    margin-right: 100px;
+  }
+
+.index-carousel{
+  margin-top: 250px;
+  margin-left: 300px;
 }
-</script> -->
-
-
-
-
-<!-- <h2><%=link_to "Create an order?", '/orders'%></h2> -->
-
-<!-- <h2><%=link_to "View your profile?", user_path(current_user)%></h2> -->
-</body>
-
-
-<style media="screen">
-  h2 {
-    margin-top: 30px;
-  }
-</style>
+  </style>
