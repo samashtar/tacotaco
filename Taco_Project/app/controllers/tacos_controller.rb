@@ -1,6 +1,7 @@
 class TacosController < ApplicationController
 
   before_action(:find_taco, only: [:show, :edit, :update, :destroy])
+  before_action(:require_login)
 
   def new
     @user = current_user

@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
 
   before_action(:find_user, only: [:index, :finalize, :finalized])
+  before_action(:require_login)
 
   def index
   end

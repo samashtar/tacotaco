@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   end
 
   def about
-
+    require_login
   end
 
   def current_user
@@ -16,6 +16,10 @@ class ApplicationController < ActionController::Base
     else
       nil
     end
+  end
+
+  def require_login
+    return head(:forbidden) unless session.include? :user_id
   end
 
 end
