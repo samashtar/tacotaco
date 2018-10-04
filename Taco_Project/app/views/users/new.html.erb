@@ -1,5 +1,7 @@
 <h1>Create a User</h1>
 
+<%= render partial: "error_list", locals: {new_object: @user} %>
+
 <%= render partial: 'form', locals: {user: @user} %>
 
 <br>

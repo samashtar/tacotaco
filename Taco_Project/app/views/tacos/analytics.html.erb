@@ -1,0 +1,19 @@
+<style>
+
+
+</style>
+
+
+<div class="bigwrapper">
+  <h1>Taco Analytics</h1>
+
+  <p>The cats have served <%=@tacos.length%> tacos to this day!</p>
+  <p>The average taco has <%=Taco.average_calories%> calories.</p>
+
+  <ul>
+    <li>The most popular protein is: <%=Taco.most_popular("protein")%></li><br>
+    <li>The most popular topping is: <%=Taco.most_popular("toppings")%></li><br>
+    <li>The most popular rice is: <%=Taco.most_popular("rice")%></li><br>
+    <li>The most popular sauce is: <%=Taco.most_popular("sauces")%></li><br>
+  </ul>
+</div>

@@ -5,6 +5,23 @@ class Taco < ApplicationRecord
   has_many :ingredients, through: :taco_ingredients
   has_many :users, through: :user_tacos
 
+  # CLASS METHODS
+
+  def self.most_popular(category)
+    array = all.map{|taco| taco.item_name(category)}
+    array.delete_if(&:blank?).max_by{|ingredient| array.count(ingredient)}
+  end
+
+  def self.average_calories
+    all.map{|taco| taco.calories}.delete_if(&:blank?).reduce(:+) / all.length.to_f
+  end
+
+  # INSTANCE METHODS
+
+  def calories
+    self.ingredients.map{|i| i.calories}.reduce(:+) || 0
+  end
+
   def generate_name
     string = ""
     if self.has?("sauce")

@@ -42,6 +42,10 @@ class TacosController < ApplicationController
     redirect_to orders_path
   end
 
+  def analytics
+    @tacos = Taco.all
+  end
+
   private
 
   def find_taco

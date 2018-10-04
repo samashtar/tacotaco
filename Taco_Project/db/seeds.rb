@@ -16,33 +16,33 @@ categories = [
 categories.each {|category| Category.create(category)}
 
 ingredients = [
-  {name: "lettuce", price: 0, calories: 0, category_id: Category.find_by(name: "topping").id},
-  {name: "cheese", price: 0, calories: 0, category_id: Category.find_by(name: "topping").id},
-  {name: "tomato", price: 0, calories: 0, category_id: Category.find_by(name: "topping").id},
-  {name: "guacamole", price: 0.25, calories: 0, category_id: Category.find_by(name: "topping").id},
-  {name: "fajita veggies", price: 0, calories: 0, category_id: Category.find_by(name: "topping").id},
-  {name: "queso", price: 0.25, calories: 0, category_id: Category.find_by(name: "topping").id},
-  {name: "corn", price: 0, calories: 0, category_id: Category.find_by(name: "topping").id},
+  {name: "lettuce", price: 0, calories: 5, category_id: Category.find_by(name: "topping").id},
+  {name: "cheese", price: 0, calories: 113, category_id: Category.find_by(name: "topping").id},
+  {name: "tomato", price: 0, calories: 22, category_id: Category.find_by(name: "topping").id},
+  {name: "guacamole", price: 0.25, calories: 155, category_id: Category.find_by(name: "topping").id},
+  {name: "fajita veggies", price: 0, calories: 30, category_id: Category.find_by(name: "topping").id},
+  {name: "queso", price: 0.25, calories: 113, category_id: Category.find_by(name: "topping").id},
+  {name: "corn", price: 0, calories: 85, category_id: Category.find_by(name: "topping").id},
 
-  {name: "beef", price: 0, calories: 0, category_id: Category.find_by(name: "protein").id},
-  {name: "chicken", price: 0, calories: 0, category_id: Category.find_by(name: "protein").id},
-  {name: "chorizo", price: 0, calories: 0, category_id: Category.find_by(name: "protein").id},
-  {name: "tofu", price: 0, calories: 0, category_id: Category.find_by(name: "protein").id},
+  {name: "beef", price: 0, calories: 213, category_id: Category.find_by(name: "protein").id},
+  {name: "chicken", price: 0, calories: 335, category_id: Category.find_by(name: "protein").id},
+  {name: "chorizo", price: 0, calories: 206, category_id: Category.find_by(name: "protein").id},
+  {name: "tofu", price: 0, calories: 94, category_id: Category.find_by(name: "protein").id},
 
-  {name: "multigrain", price: 0, calories: 0, category_id: Category.find_by(name: "tortilla").id},
-  {name: "white", price: 0, calories: 0, category_id: Category.find_by(name: "tortilla").id},
-  {name: "corn", price: 0, calories: 0, category_id: Category.find_by(name: "tortilla").id},
-  {name: "gluten free", price: 0.25, calories: 0, category_id: Category.find_by(name: "tortilla").id},
+  {name: "multigrain", price: 0, calories: 60, category_id: Category.find_by(name: "tortilla").id},
+  {name: "white", price: 0, calories: 70, category_id: Category.find_by(name: "tortilla").id},
+  {name: "corn", price: 0, calories: 65, category_id: Category.find_by(name: "tortilla").id},
+  {name: "gluten free", price: 0.25, calories: 60, category_id: Category.find_by(name: "tortilla").id},
 
   {name: "mild", price: 0, calories: 0, category_id: Category.find_by(name: "sauce").id},
   {name: "medium", price: 0, calories: 0, category_id: Category.find_by(name: "sauce").id},
   {name: "hot", price: 0, calories: 0, category_id: Category.find_by(name: "sauce").id},
 
-  {name: "black", price: 0, calories: 0, category_id: Category.find_by(name: "bean").id},
-  {name: "pinto", price: 0, calories: 0, category_id: Category.find_by(name: "bean").id},
+  {name: "black", price: 0, calories: 162, category_id: Category.find_by(name: "bean").id},
+  {name: "pinto", price: 0, calories: 142, category_id: Category.find_by(name: "bean").id},
 
-  {name: "brown rice", price: 0, calories: 0, category_id: Category.find_by(name: "rice").id},
-  {name: "white rice", price: 0, calories: 0, category_id: Category.find_by(name: "rice").id},
+  {name: "brown rice", price: 0, calories: 216, category_id: Category.find_by(name: "rice").id},
+  {name: "white rice", price: 0, calories: 206, category_id: Category.find_by(name: "rice").id},
 ]
 
 ingredients.each {|ingredient| Ingredient.create(ingredient)}
@@ -95,11 +95,52 @@ users.each {|user| User.create(user)}
 
 cheese = Ingredient.find_by(name: "cheese")
 chicken = Ingredient.find_by(name: "chicken")
+tofu = Ingredient.find_by(name: "tofu")
+beef = Ingredient.find_by(name: "beef")
 black_beans = Ingredient.find_by(name: "black")
 tomato = Ingredient.find_by(name: "tomato")
+brown_rice = Ingredient.find_by(name: "brown rice")
+guacamole = Ingredient.find_by(name: "guacamole")
+medium = Ingredient.find_by(name: "medium")
+multigrain = Ingredient.find_by(name: "multigrain")
 
-tacoboutit =  Taco.create(name: "Taco 'bout it'")
-lost_in_the_sauce = Taco.create(name: "Lost in the Sauce")
-beanormous = Taco.create(name: "Beanormous")
-cheese_louise = Taco.create(name: "Cheese Louise")
-macho_taco = Taco.create(name: "Macho Taco", protein: chicken.id, toppings: [cheese.id, tomato.id], bean: black_beans.id)
+tacoboutit =  Taco.create(
+  name: "Taco 'bout it'",
+  protein: chicken.id,
+  toppings: [guacamole.id, cheese.id],
+  sauces: [medium.id],
+  bean: black_beans.id,
+  rice: brown_rice.id,
+  tortilla: multigrain.id)
+lost_in_the_sauce = Taco.create(
+  name: "Lost in the Sauce",
+  protein: chicken.id,
+  toppings: [guacamole.id, cheese.id],
+  sauces: [medium.id],
+  bean: black_beans.id,
+  rice: brown_rice.id,
+  tortilla: multigrain.id)
+beanormous = Taco.create(
+  name: "Beanormous",
+  protein: chicken.id,
+  toppings: [guacamole.id, cheese.id],
+  sauces: [medium.id],
+  bean: black_beans.id,
+  rice: brown_rice.id,
+  tortilla: multigrain.id)
+cheese_louise = Taco.create(
+  name: "Cheese Louise",
+  protein: chicken.id,
+  toppings: [guacamole.id, cheese.id],
+  sauces: [medium.id],
+  bean: black_beans.id,
+  rice: brown_rice.id,
+  tortilla: multigrain.id)
+macho_taco = Taco.create(
+  name: "Macho Taco",
+  protein: chicken.id,
+  toppings: [guacamole.id, cheese.id],
+  sauces: [medium.id],
+  bean: black_beans.id,
+  rice: brown_rice.id,
+  tortilla: multigrain.id)
