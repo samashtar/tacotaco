@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  resources :coupons
-  resources :categories
-  resources :ingredients
+  # resources :coupons
+  # resources :categories
+  # resources :ingredients
   resources :tacos
   resources :locations
-  resources :users
-  resources :orders
+  resources :users, only: [:show, :edit, :update, :new, :create]
+  resources :orders, only: [:index]
 
   get '/about', to: 'application#about'
 
