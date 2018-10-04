@@ -1,5 +1,5 @@
 <style>
-.sidenav {
+/* .sidenav {
     margin-top: -50px;
     width: 180px;
     position: fixed;
@@ -33,30 +33,125 @@ display: block;
 }
 .nav-item:hover{
   background: #eee;
-}
+} */
 .title {
 font-family: 'Pacifico', cursive;
 margin-top: -50px;
 margin-bottom: 20px;
+}
 
+
+.nav-primary-links{
+    padding: 0;
+    margin: 20px auto;
+    width: 225px;
+
+}
+.nav-primary-links li{
+	width: 115px;
+	height: 75px;
+	overflow: hidden;
+	display: block;
+	background: #fff;
+	/* box-shadow: 1px 1px 2px rgba(0,0,0,0.2); */
+	margin-bottom: 4px;
+	/* border-left: 10px solid #FF3F69; */
+	transition: all 300ms ease-in-out;
+  font-size: 20px;
+  transition: all 300ms linear;
+}
+.nav-primary-links li:last-child{
+    margin-bottom: 0px;
+}
+.nav-primary-links li a{
+    text-align: left;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    position:relative;
+}
+
+.nav-primary-links li:hover{
+    /* border-color: #fff004; */
+    color: #fff;
+}
+.nav-item:hover {
+    color: #fff;
+    /* text-shadow: 0px 0px 1px #fff004; */
+    font-size: 30px;
+}
+.sidenav{
+  font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    /* text-shadow: 0px 0px 1px #333; */
+    line-height: 90px;
+    position: absolute;
+    width: 90px;
+    left: 20px;
+    text-align: center;
+    transition: all 300ms linear;
+    position: absolute;
+    left: 120px;
+    width: 370px;
+    height: 60px;
+    top: 20px;
+}
+
+.social {
+margin-top: -50px;
+margin-bottom: -50px;
+}
+.fa-facebook{
+  color: #3A5CA9;
+}
+.fa-youtube{
+  color: #FF0001;
+}
+.fa-instagram{
+  color: #DE5D80;
+}
+.fa-snapchat{
+  color: black;
+}
+.fa-spotify{
+  color: #1DD155;
 }
 </style>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
 <body>
 <div class="sidenav">
   <%=image_tag "1012187_1.jpg", :size => "200x200"%>
-  <h1 class ="title" id="logincenter">TACOCAT</h1>
+  <h1 class ="title" id="logincenter" class="indexcat">TACOCAT</h1>
+  <div class="social">
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-youtube"></a>
+    <a href="#" class="fa fa-snapchat"></a>
+    <a href="#" class="fa fa-instagram"></a>
+    <a href="#" class="fa fa-spotify"></a>
+  </div>
 <nav class="nav">
   <ul class="nav-primary-links">
+    <li class="nav-item"><a href="/">Home</a></li>
+    <li class="nav-item"><a href="<%=user_path(current_user)%>">Profile</a></li>
     <li class="nav-item"><a href="/about">About</a></li>
     <li class="nav-item"><a href="/orders">Order</a></li>
     <li class="nav-item"><a href="/locations">Locations</a></li>
     <li class="nav-item"><a href="/logout">Logout</a></li>
+
+
   </ul>
 </nav>
 </div>
 </body>
+
+
+
+<!-- Add font awesome icons -->
