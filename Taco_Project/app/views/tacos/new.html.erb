@@ -1,2 +1,12 @@
 <h1>Make Your Perfect Taco </h1>
+
 <%= render partial: 'form', locals: {taco: @taco} %>
+
+<br>
+
+<h3>WARNING! The following ingredients cost extra:</h3>
+<ul>
+  <% @extras.each do |ingredient| %>
+    <li><%= ingredient.name %> - <%= ingredient.price_string %> </li><br>
+  <% end %>
+</ul>

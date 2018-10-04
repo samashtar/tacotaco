@@ -7,6 +7,7 @@ class TacosController < ApplicationController
     @user = current_user
     @taco = Taco.new
     @category = Category.all
+    @extras = Ingredient.extra_cost
   end
 
   def create
