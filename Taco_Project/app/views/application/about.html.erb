@@ -1,50 +1,56 @@
 
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+    </div>
+    <div class="col-10">
+      <h1>🌮 ABOUT TACOCAT 🌮</h1>
 
+      <p>The world has changed.</p>
 
-<h1>🌮 ABOUT TACOCAT 🌮</h1>
+      <p>I feel it in the lettuce.</p>
 
-<p>The world has changed.</p>
+      <p>I feel it in the salsa.</p>
 
-<p>I feel it in the lettuce.</p>
+      <p>I smell it in the queso.</p>
 
-<p>I feel it in the salsa.</p>
+      <p>It's raining tacos. Tacos are falling from the sky. But who will deliver them?</p>
 
-<p>I smell it in the queso.</p>
+      <p>Fortunately cats stepped forward to save the world from the rain of tacos.</p>
 
-<p>It's raining tacos. Tacos are falling from the sky. But who will deliver them?</p>
+      <p>They deliver tacos. They will deliver a taco right to you!</p>
 
-<p>Fortunately cats stepped forward to save the world from the rain of tacos.</p>
+      <p>The hero cats who stepped forward contacted developers PATTI and SAM.</p>
 
-<p>They deliver tacos. They will deliver a taco right to you!</p>
+      <p>The result of this collaboration was TACOCAT.</p>
 
-<p>The hero cats who stepped forward contacted developers PATTI and SAM.</p>
+      <p>(TACOCAT's tacos are the most affordable because we don't have to pay the cats)</p>
+    </div>
+  </div>
+  <hr>
+  <div class="row ourteam">
+    <div class="col-2">
+    </div>
+    <div class="col-10">
+      <h2>OUR TEAM</h2>
 
-<p>The result of this collaboration was TACOCAT.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
 
-<p>(TACOCAT's tacos are the most affordable because we don't have to pay the cats)</p>
-
-<h2>OUR TEAM</h2>
-
-<div class="grid">
-  <span class="dev_card">
-    <h3>Picture of Patti will go here</h3>
-    <h3>Patti</h3>
-  </span>
-
-  <span class="dev_card">
-    <h3>Picture of Sam will go here</h3>
-    <h3>Sam</h3>
-  </span>
+    </div>
+    <div class="col-5">
+      <h3>Patti</h3>
+      <%=image_tag "newheadshot.jpg", :size => "410x410" %>
+    </div>
+    <div class="col-5">
+      <h3>Sam</h3>
+      <%=image_tag "sam_pic.jpg", :size => "440x440" %>
+    </div>
+  </div>
 </div>
-<%= video_tag "Sequence 01.mp4", autoplay: :autoplay, mute: :mute, class: "video" %>
+<div class="row row50">
+</div>
 
 <style media="screen">
-.grid {
-  display: grid;
-  grid-template-columns: auto auto;
-  margin: 200px;
-}
-
-.dev_card {
-}
-</style>

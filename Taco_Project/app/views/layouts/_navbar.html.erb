@@ -5,32 +5,58 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-
-<body>
-  <div class="container-fluid">
-    <div class="sidenav">
-        <%=image_tag "1012187_1.jpg", :size => "200x200"%>
-        <h1 class ="title" id="logincenter" class="indexcat">TACOCAT</h1>
-      <div class="social">
-          <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-facebook" target="_blank"></a>
-          <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-twitter" target="_blank"></a>
-          <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-youtube" target="_blank"></a>
-          <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-snapchat" target="_blank"></a>
-          <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-instagram" target="_blank"></a>
-          <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-spotify" target="_blank"></a>
-      </div>
-      <nav class="nav">
-        <ul class="nav-primary-links">
-          <li class="nav-item"><a href="/">Home</a></li>
-          <li class="nav-item"><a href="<%=user_path(current_user)%>">Profile</a></li>
-          <li class="nav-item"><a href="/about">About</a></li>
-          <li class="nav-item"><a href="/orders">Order</a></li>
-          <li class="nav-item"><a href="/locations">Locations</a></li>
-          <li class="nav-item"><a href="/logout">Logout</a></li>
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+          <h1 class ="title" id="navtitle" class="indexcat">TACOCAT</h1>
+            <div class="navbarbootstrap">
+                <%=image_tag "1012187_1.jpg", :size => "200x200"%>
+              <div class="social">
+                  <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-facebook" target="_blank"></a>
+                  <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-twitter" target="_blank"></a>
+                  <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-youtube" target="_blank"></a>
+                  <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-snapchat" target="_blank"></a>
+                  <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-instagram" target="_blank"></a>
+                  <a href="https://www.youtube.com/watch?v=zLZKuAY2tkc" class="fa fa-spotify" target="_blank"></a>
+              </div>
+            </div>
+        </div>
+        <div class="navlinks">
+        <ul class="list-unstyled components">
+              <li>
+                  <a id="linkhome" href="/">Home</a>
+              </li>
+            <li>
+                <a id="linkabout" href="/about">About</a>
+            </li>
+            <li>
+                <a id="linkprofile" href="<%=user_path(current_user)%>">Profile</a>
+            </li>
+            <li>
+                <a id="linklocation" href="/locations">Locations</a>
+            </li>
+            <li>
+                <a id="linkorder" href="/orders">Orders</a>
+            </li>
+            <li>
+                <a id="linklogout" href="/logout">LogOut</a>
+            </li>
         </ul>
-      </nav>
-    </div>
-  </div>
+      </div>
+    </nav>
+    <!-- Page Content -->
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -107,3 +133,61 @@
 
 
 <!-- Add font awesome icons -->
+
+<style media="screen">
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+#sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1;
+  background: #fff;
+  color: #000;
+  transition: all 0.3s;
+}
+.sidebar-header{
+  margin-bottom: 100px;
+}
+#navtitle {
+  margin-top: 50px;
+  margin-bottom: -5px;
+  z-index: 2;
+}
+.navbarbootstrap {
+  z-index: -1;
+}
+
+.navlinks{
+width: 40px;
+margin-left: 90px;
+font-size: 15px;
+color: #337ab7;
+}
+#linkhome {
+  font-size: 15px;
+  color: #337ab7;
+}
+#linkabout {
+  font-size: 15px;
+  color: #337ab7;
+}#linkorder {
+  font-size: 15px;
+  color: #337ab7;
+}#linkprofile {
+  font-size: 15px;
+  color: #337ab7;
+}#linklogout {
+  font-size: 15px;
+  color: #337ab7;
+}#linklocation {
+  font-size: 15px;
+  color: #337ab7;
+}
+
+</style>

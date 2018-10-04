@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_04_151809) do
+ActiveRecord::Schema.define(version: 2018_10_04_215918) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2018_10_04_151809) do
     t.boolean "order_status", default: true
     t.text "description"
     t.boolean "signature", default: false
+    t.string "img"
   end
 
   create_table "user_tacos", force: :cascade do |t|

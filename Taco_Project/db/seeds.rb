@@ -114,7 +114,8 @@ tacoboutit =  Taco.create(
   tortilla: multigrain.id,
   signature: true,
   description:
-  "Our cats can't stop taco'in 'bout it! Our cats also struggle with apostrophes.")
+  "Our cats can't stop taco'in 'bout it! Our cats also struggle with apostrophes.",
+  img:"tacoboutit.jpg")
 lost_in_the_sauce = Taco.create(
   name: "Lost in the Sauce",
   protein: chicken.id,
@@ -124,7 +125,8 @@ lost_in_the_sauce = Taco.create(
   rice: brown_rice.id,
   tortilla: multigrain.id,
   signature: true,
-  description: "You will literally lose your identity in this taco. Be reborn.")
+  description: "You will literally lose your identity in this taco. Be reborn.",
+  img:"lost_in_the_sauce.jpg")
 beanormous = Taco.create(
   name: "Beanormous",
   protein: chicken.id,
@@ -135,7 +137,8 @@ beanormous = Taco.create(
   tortilla: multigrain.id,
   signature: true,
   description:
-  "We asked whether we COULD make a taco with this many beans, but we never asked if we SHOULD."
+  "We asked whether we COULD make a taco with this many beans, but we never asked if we SHOULD.",
+  img:"beanormous.jpg")
 cheese_louise = Taco.create(
   name: "Cheese Louise",
   protein: chicken.id,
@@ -145,7 +148,8 @@ cheese_louise = Taco.create(
   rice: brown_rice.id,
   tortilla: multigrain.id,
   signature: true,
-  description: "Oh gawsh, Bobby. You went and spilled the cheese again!")
+  description: "Oh gawsh, Bobby. You went and spilled the cheese again!",
+  img:"cheese_louise.jpg")
 the_john_cena = Taco.create(
   name: "The John Cena",
   protein: chicken.id,
@@ -155,4 +159,5 @@ the_john_cena = Taco.create(
   rice: brown_rice.id,
   tortilla: multigrain.id,
   signature: true,
-  description: "WARNING!!! May cause you to turn into John Cena.")
+  description: "WARNING!!! May cause you to turn into John Cena.",
+  img:"johncena.jpg")

@@ -23,4 +23,6 @@ Rails.application.routes.draw do
 
   post '/add_signature', to: 'orders#add_signature'
 
+  patch '/remove_taco', to: 'users#remove_taco'
+
 end
