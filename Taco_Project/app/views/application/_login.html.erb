@@ -22,25 +22,29 @@
 
   .title {
   font-family: 'Pacifico', cursive;
-  margin-top: 85px;
   margin-bottom: 30px;
 
   }
 
+  .giant_wrapper {
+    margin-top: 85px;
+  }
+
 </style>
+<div class="giant_wrapper">
+  <h1 class ="title" id="titleindex">TACOCAT</h1>
+  <%=image_tag "Taco_Cat.gif"%>
 
-<h1 class ="title" id="logincenter">TACOCAT</h1>
-<%=image_tag "Taco_Cat.gif"%>
+  <div class="grid_wrapper">
+    <div class="grid">
+      <div class="login">
+        <%= render partial: 'sessions/form' %>
 
-<div class="grid_wrapper">
-  <div class="grid">
-    <div id="logincenter" class="login">
-      <%= render partial: 'sessions/form' %>
+      </div>
 
-    </div>
-
-    <div id="logincenter" class="create_account">
-      <%= link_to "create an account", new_user_path%>
+      <div class="create_account">
+        <%= link_to "create an account", new_user_path%>
+      </div>
     </div>
   </div>
 </div>

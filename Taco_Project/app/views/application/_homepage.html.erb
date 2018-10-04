@@ -1,17 +1,33 @@
-<h2>Welcome <%= current_user.name %></h2>
 
-<h2><%=link_to "Create an order?", '/orders'%></h2>
 
-<h2><%=link_to "View your profile?", user_path(current_user)%></h2>
+<body>
+  <h2>Welcome <%= current_user.name %></h2>
+<!-- <script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
 
-<h3><%=link_to "Logout?", '/logout'%></h3>
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script> -->
+
+
+
+
+<!-- <h2><%=link_to "Create an order?", '/orders'%></h2> -->
+
+<!-- <h2><%=link_to "View your profile?", user_path(current_user)%></h2> -->
+</body>
 
 
 <style media="screen">
-.title {
-font-family: 'Pacifico', cursive;
-margin-top: 50px;
-margin-bottom: 0px;
-
-}
+  h2 {
+    margin-top: 30px;
+  }
 </style>
