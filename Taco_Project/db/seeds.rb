@@ -111,7 +111,10 @@ tacoboutit =  Taco.create(
   sauces: [medium.id],
   bean: black_beans.id,
   rice: brown_rice.id,
-  tortilla: multigrain.id)
+  tortilla: multigrain.id,
+  signature: true,
+  description:
+  "Our cats can't stop taco'in 'bout it! Our cats also struggle with apostrophes.")
 lost_in_the_sauce = Taco.create(
   name: "Lost in the Sauce",
   protein: chicken.id,
@@ -119,7 +122,9 @@ lost_in_the_sauce = Taco.create(
   sauces: [medium.id],
   bean: black_beans.id,
   rice: brown_rice.id,
-  tortilla: multigrain.id)
+  tortilla: multigrain.id,
+  signature: true,
+  description: "You will literally lose your identity in this taco. Be reborn.")
 beanormous = Taco.create(
   name: "Beanormous",
   protein: chicken.id,
@@ -127,7 +132,10 @@ beanormous = Taco.create(
   sauces: [medium.id],
   bean: black_beans.id,
   rice: brown_rice.id,
-  tortilla: multigrain.id)
+  tortilla: multigrain.id,
+  signature: true,
+  description:
+  "We asked whether we COULD make a taco with this many beans, but we never asked if we SHOULD."
 cheese_louise = Taco.create(
   name: "Cheese Louise",
   protein: chicken.id,
@@ -135,12 +143,16 @@ cheese_louise = Taco.create(
   sauces: [medium.id],
   bean: black_beans.id,
   rice: brown_rice.id,
-  tortilla: multigrain.id)
-macho_taco = Taco.create(
-  name: "Macho Taco",
+  tortilla: multigrain.id,
+  signature: true,
+  description: "Oh gawsh, Bobby. You went and spilled the cheese again!")
+the_john_cena = Taco.create(
+  name: "The John Cena",
   protein: chicken.id,
   toppings: [guacamole.id, cheese.id],
   sauces: [medium.id],
   bean: black_beans.id,
   rice: brown_rice.id,
-  tortilla: multigrain.id)
+  tortilla: multigrain.id,
+  signature: true,
+  description: "WARNING!!! May cause you to turn into John Cena.")

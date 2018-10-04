@@ -4,6 +4,7 @@ class OrdersController < ApplicationController
   before_action(:require_login)
 
   def index
+    @signatures = Taco.signature_tacos
   end
 
   def finalize

@@ -1,4 +1,12 @@
-<h1>Your Current Order </h1>
+<h3>Our Signature Tacos</h3>
+
+<p class="signature-taco">
+  <%= render partial: 'tacos/signature', collection: @signatures %><br>
+</p>
+
+<h3><%= link_to "Make Your Own 🌮", new_taco_path %></h3>
+
+<h3>Your Current Order</h3>
 
 <% @user.active_tacos.each do |taco| %>
 
@@ -6,8 +14,6 @@
     <%=link_to("DELETE", taco_path(taco.id), method: :delete)%>)</h3>
 
 <% end %>
-
-<h3><%= link_to "Make a New 🌮", new_taco_path %></h3>
 
 <h3><%=link_to "Review Your Order", finalize_path(@user) %></h3>
 
