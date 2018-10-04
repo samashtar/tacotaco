@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action(:find_user, only: [:show, :edit, :update])
+  before_action(:find_user, only: [:show, :edit, :update, :remove_taco])
   before_action(:require_login, only: [:show, :edit, :update])
 
   def new
@@ -30,6 +30,11 @@ class UsersController < ApplicationController
   def update
     @user.update(user_params)
     redirect_to user_path(@user)
+  end
+
+  def remove_taco
+    @user.remove_taco(params[:user][:taco_id].to_i)
+    redirect_to '/orders'
   end
 
   private

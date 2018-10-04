@@ -135,7 +135,7 @@ beanormous = Taco.create(
   tortilla: multigrain.id,
   signature: true,
   description:
-  "We asked whether we COULD make a taco with this many beans, but we never asked if we SHOULD."
+  "We asked whether we COULD make a taco with this many beans, but we never asked if we SHOULD.")
 cheese_louise = Taco.create(
   name: "Cheese Louise",
   protein: chicken.id,

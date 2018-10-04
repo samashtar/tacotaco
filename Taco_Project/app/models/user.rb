@@ -10,6 +10,10 @@ class User < ApplicationRecord
   validates :address, presence: true
   validates :email, format: {with: /@/}
 
+  def remove_taco(taco_id)
+    tacos.delete(taco_id)
+  end
+
   def total
     total = 0
     active_tacos.each do |taco|
