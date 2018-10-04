@@ -21,4 +21,6 @@ Rails.application.routes.draw do
 
   get '/analytics', to: 'tacos#analytics'
 
+  post '/add_signature', to: 'orders#add_signature'
+
 end

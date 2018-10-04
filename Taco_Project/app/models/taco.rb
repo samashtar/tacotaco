@@ -27,21 +27,22 @@ class Taco < ApplicationRecord
   end
 
   def generate_name
-    string = ""
-    if self.has?("sauce")
-      string = string + "#{item_name("sauces")} "
+    if self.signature == true
+      self.name
+    else
+      string = ""
+      if self.has?("sauce")
+        string = string + "#{item_name("sauces")} "
+      end
+      if self.has?("protein")
+        string = string + "#{item_name("protein")} "
+      end
+      string = string + "Taco"
+      if self.has?("topping")
+        string = string + " with #{item_name("toppings")}"
+      end
+      string
     end
-
-    if self.has?("protein")
-      string = string + "#{item_name("protein")} "
-    end
-
-    string = string + "Taco"
-
-    if self.has?("topping")
-      string = string + " with #{item_name("toppings")}"
-    end
-    string
   end
 
   def has?(category)
