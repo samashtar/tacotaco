@@ -18,6 +18,5 @@
   <%=f.label "Choose Your Sauce" %><br>
   <%=f.collection_check_boxes(:sauces, Ingredient.category("sauce"), :id, :name)%><br>
 
-
   <%=f.submit%>
 <% end  %>

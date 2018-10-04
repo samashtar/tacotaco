@@ -11,6 +11,9 @@ class OrdersController < ApplicationController
   end
 
   def finalized
+    ApplicationMailer.receipt_email(@user).deliver_now
+    @user.deactivate_tacos
+    @user.save
   end
 
   def add_signature

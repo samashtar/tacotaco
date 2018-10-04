@@ -1,0 +1,12 @@
+STYLING
+- all pages except homepage (background, justification of elements)
+- pictures instead of checkboxes
+- staff info and pics on page
+
+BACKEND
+- warn users about toppings that cost extra
+- remove unused routes
+- send email at the end
+- coupons (Add coupon and apply coupon to order)
+- custom error pages
+- allow admin to edit locations
