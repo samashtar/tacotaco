@@ -1,13 +1,17 @@
-<h1>Your Current Order </h1>
-<ul>
-<% @user.active_tacos.each_with_index do |taco, index|%>
-  <% indexplusone = index + 1 %>
-  <li><%= taco.generate_name %> |</li>
-  <li>Price: $<%= taco.taco_price %> </li><br>
-<% end %>
-</ul>
-<h3>Total Order Cost: $<%=@user.total %></h3>
+<div class="container">
 
-<h3><%=link_to "Go Back & Edit Your Order", '/orders'%></h3>
+  <h1>Your Current Order </h1>
+  <ul>
+  <% @user.active_tacos.each_with_index do |taco, index|%>
+    <% indexplusone = index + 1 %>
+    <li><%= taco.generate_name %> |</li>
+    <li>Price: $<%= taco.taco_price %> </li><br>
+  <% end %>
+  </ul>
+  <h3>Total Order Cost: $<%=@user.total %></h3>
 
-<h2><%=link_to "Finalize", finalized_path%> Order</h2>
+  <h3><%=link_to "Go Back & Edit Your Order", '/orders'%></h3>
+
+  <h2><%=link_to "Finalize Order", finalized_path%></h2>
+
+</div>

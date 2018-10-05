@@ -1,12 +1,43 @@
-<h1>Make Your Perfect Taco </h1>
+<div class="container">
 
-<%= render partial: 'form', locals: {taco: @taco} %>
+  <!-- row 1 -->
+  <div class="row">
+    <div class="col-1">
+    </div>
+    <div class="col-11 text-center">
+      <h1>Make Your Perfect Taco </h1>
+    </div>
+  </div>
 
-<br>
+  <!-- row 2 -->
+  <div class="row">
+    <div class="col-12">
+      <br>
+    </div>
+  </div>
 
-<h3>WARNING! The following ingredients cost extra:</h3>
-<ul>
-  <% @extras.each do |ingredient| %>
-    <li><%= ingredient.name %> - <%= ingredient.price_string %> </li><br>
-  <% end %>
-</ul>
+  <!-- row 3 -->
+
+  <div class="row">
+    <div class="col-7">
+      <h2>Pick Your Ingredients</h2>
+      <br>
+      <%= render partial: 'form', locals: {taco: @taco} %>
+    </div>
+
+    <div class="col-5">
+      <h2>WARNING!</h2>
+      <br>
+      <h3>The following ingredients cost extra</h3>
+      <% @extras.each do |ingredient| %>
+        <li><%= ingredient.name %> - <%= ingredient.price_string %> </li><br>
+      <% end %>
+      <%=image_tag "avocado_dabbing.jpg", size: '200' %>
+
+    </div>
+
+  </div>
+
+
+
+</div>
