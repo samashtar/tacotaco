@@ -1,75 +1,116 @@
+<style media="screen">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+  /* !<----carousel --->! */
+
+  #myCarousel {
+  margin-left: 0px;
+  margin-top: 0px;
+  max-width: 1000px;
+  display: block;
+  overflow: hidden;
+  }
+  .carousel-control {
+    width: 0%;
+    color: #000;
+    opacity: 1;
+  }
+  .carousel-control:hover {
+  }
+  .left {
+    margin-left: 100px;
+  }
+  .left:hover {
+  }
+  .right {
+    margin-right: 100px;
+  }
+  .index-carousel{
+    margin-top: 250px;
+    margin-left: 300px;
+  }
+
+  .col-9 {
+    margin-left: 80px;
+  }
+
+  </style>
 
 <body>
 
 <div class="container">
-<div class="row">
-<!-- slider  -->
-<div class="col-1">
+  <div class="row">
+  <!-- slider  -->
+    <!-- <div class="col-1">
 
-</div>
-<div class="col-2">
-  <li>  did u kno cats r 9 times smarter than humans?</li>
- <br>
-<li>  MEMERS ARE DREAMERS
-</li>
-</div>
-<div class="col-9">
-  <div id="slides" class="carousel slide" data-ride="carousel">
-  <ul class="carousel-indicators">
-    <li data-target=#slides data-slide-to="0" class="active"></li>
-    <li data-target=#slides data-slide-to="1"></li>
-    <li data-target=#slides data-slide-to="2"></li>
-    <li data-target=#slides data-slide-to="3"></li>
-    <li data-target=#slides data-slide-to="4"></li>
-  </ul>
-  <div class="carousel-inner">
-      <div class="carousel-item active">
-        <%= image_tag("taco_pic_1.jpg",:size => "984x753")%>
-        <div class="carousel-caption">
-              <h1 class="display-2">Cats Do it Better.</h1>
-                <a href="/orders"class="btn btn-primary btn-lg" name="button">Order Now</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag("taco_pic_2.jpg",:size => "984x753")%>
-        <div class="carousel-caption">
+    </div> -->
+
+    <div class="col-9">
+      <div id="slides" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target=#slides data-slide-to="0" class="active"></li>
+          <li data-target=#slides data-slide-to="1"></li>
+          <li data-target=#slides data-slide-to="2"></li>
+          <li data-target=#slides data-slide-to="3"></li>
+          <li data-target=#slides data-slide-to="4"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <%= image_tag("taco_pic_1.jpg",:size => "984x753")%>
+            <div class="carousel-caption">
               <h1 class="display-2">Cats Do it Better.</h1>
               <a href="/orders"class="btn btn-primary btn-lg" name="button">Order Now</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag("taco_pic_3.jpg",:size => "984x753")%>
-        <div class="carousel-caption">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag("taco_pic_2.jpg",:size => "984x753")%>
+            <div class="carousel-caption">
               <h1 class="display-2">Cats Do it Better.</h1>
               <a href="/orders"class="btn btn-primary btn-lg" name="button">Order Now</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag("taco_pic_4.jpg",:size => "984x753")%>
-        <div class="carousel-caption">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag("taco_pic_3.jpg",:size => "984x753")%>
+            <div class="carousel-caption">
               <h1 class="display-2">Cats Do it Better.</h1>
               <a href="/orders"class="btn btn-primary btn-lg" name="button">Order Now</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag("taco_pic_5.jpg",:size => "984x753")%>
-        <div class="carousel-caption">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag("taco_pic_4.jpg",:size => "984x753")%>
+            <div class="carousel-caption">
               <h1 class="display-2">Cats Do it Better.</h1>
               <a href="/orders"class="btn btn-primary btn-lg" name="button">Order Now</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag("taco_pic_5.jpg",:size => "984x753")%>
+            <div class="carousel-caption">
+              <h1 class="display-2">Cats Do it Better.</h1>
+              <a href="/orders"class="btn btn-primary btn-lg" name="button">Order Now</a>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+
+    <div class="col-2">
+      <br>
+      <br>
+      <li>Did you know... that our cats have served <%=@tacos.length%> tacos to this day?</li>
+        <br>
+      <li>Did you know... that our average taco has <%=Taco.average_calories%> calories?</li>
+        <br>
+      <li>Did you know... that our most popular protein is <%=Taco.most_popular("protein")%>?</li>
+        <br>
+      <li>Did you know... that our most popular topping is <%=Taco.most_popular("toppings")%>?</li>
+        <br>
+      <li>Did you know... that our most popular rice is <%=Taco.most_popular("rice").titleize%>?</li>
+        <br>
+      <li>Did you know... that our most popular sauce is <%=Taco.most_popular("sauces")%>?</li>
+        <br>
+    </div>
+
   </div>
-</div>
-</div>
-</div>
 </div>
 
 <!--
@@ -124,38 +165,4 @@
       </a>
     </div>
   </div> !> -->
-  </body>
-
-  <style media="screen">
-
-  /* !<----carousel --->! */
-
-    #myCarousel {
-  margin-left: 0px;
-  margin-top: 0px;
-  max-width: 1000px;
-  display: block;
-  overflow: hidden;
-
-    }
-  .carousel-control {
-    width: 0%;
-    color: #000;
-    opacity: 1;
-  }
-  .carousel-control:hover {
-  }
-  .left {
-    margin-left: 100px;
-  }
-  .left:hover {
-  }
-  .right {
-    margin-right: 100px;
-  }
-
-.index-carousel{
-  margin-top: 250px;
-  margin-left: 300px;
-}
-  </style>
+</body>
