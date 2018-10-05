@@ -9,7 +9,7 @@
   }
 
   #sidebarorder {
-    width: 450px;
+    width: 250px;
     position: fixed;
     top: 0;
     right: 0;
@@ -35,6 +35,10 @@
   margin-top: 200px;
 }
 
+html h3 {
+    font-size: 20px !important;
+}
+
 </style>
 
 <div class="container">
@@ -54,6 +58,9 @@
   <!-- row 2 -->
   <!-- 5 signature tacos -->
   <div class="row">
+    <div class="col-1">
+
+    </div>
           <p class="signature-taco">
       <%= render partial: 'tacos/signature', collection: @signatures %><br>
     </p>
@@ -66,7 +73,7 @@
                 <div class="navbarbootstrap">
                     <div class="row">
                       <div class="col-12 owntaco">
-                        <h3><%= link_to "Make Your Own 🌮", new_taco_path %></h3>
+                        <h2><%= link_to "Make Your Own 🌮", new_taco_path %></h2>
                       </div>
                     </div>
                     <div class="row">
