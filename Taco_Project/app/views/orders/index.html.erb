@@ -3,6 +3,38 @@
     border-style: none;
     color: #167AF6;
   }
+  .wrapper {
+    display: flex;
+    width: 100%;
+  }
+
+  #sidebarorder {
+    width: 450px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 1;
+    background: #fff;
+    color: #000;
+    transition: all 0.3s;
+  }
+  .sidebar-header{
+    margin-bottom: 100px;
+  }
+  #navtitle {
+    margin-top: 50px;
+    margin-bottom: -5px;
+    z-index: 2;
+  }
+.owntaco{
+  margin-top: 30px;
+}
+.revieworder{
+  position: absolute;
+  margin-top: 200px;
+}
+
 </style>
 
 <div class="container">
@@ -19,44 +51,50 @@
     <div class="col-12">
       <br>
     </div>
-  </div>
   <!-- row 2 -->
   <!-- 5 signature tacos -->
   <div class="row">
-    <div class="col-1">
-
-    </div>
-    <p class="signature-taco">
+          <p class="signature-taco">
       <%= render partial: 'tacos/signature', collection: @signatures %><br>
     </p>
-   <div class="col-lg-1 owntaco">
-     <h3><%= link_to "Make Your Own 🌮", new_taco_path %></h3>
-   </div>
+</div>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebarorder">
+            <div class="sidebar-header">
+              <h1 class ="title" id="navtitle" class="indexcat">Your Order:</h1>
+                <div class="navbarbootstrap">
+                    <div class="row">
+                      <div class="col-12 owntaco">
+                        <h3><%= link_to "Make Your Own 🌮", new_taco_path %></h3>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <% @user.active_tacos.each do |taco| %>
 
-  </div>
-  <!-- row3 -->
-  <!-- make your own taco -->
-  <div class="row">
-    <div class="col-12 text-right">
-      <h3>Your Current Order</h3>
+                          <h3><%= taco.generate_name %> - $<%= taco.taco_price %> - (<%=link_to("EDIT", edit_taco_path(taco))%>,
+                            <%=form_for @user, url: '/remove_taco' do |f|%>
+                              <%= f.hidden_field :taco_id, value: taco.id %>
+                              <%= f.submit "DELETE" %>)
+                            <% end %>
+                          </h3>
 
-      <% @user.active_tacos.each do |taco| %>
-
-        <h3><%= taco.generate_name %> - $<%= taco.taco_price %> - (<%=link_to("EDIT", edit_taco_path(taco))%>,
-          <%=form_for @user, url: '/remove_taco' do |f|%>
-            <%= f.hidden_field :taco_id, value: taco.id %>
-            <%= f.submit "DELETE" %>)
-          <% end %>
-        </h3>
-
-      <% end %>
-    </div>
-  </div>
-    <div class="row">
-        <div class="col-12 text-right">
-          <h3><%=link_to "Review Your Order", finalize_path(@user) %></h3>
-          <h3>Total Order Cost: $<%=@user.total %></h3>
+                        <% end %>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 revieworder">
+                          <h3><%=link_to "Review Your Order", finalize_path(@user) %></h3>
+                          <h3>Total Order Cost: $<%=@user.total %></h3>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
         </div>
     </div>
+
+
 
 </div>
