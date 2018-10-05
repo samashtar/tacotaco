@@ -3,7 +3,6 @@
     border-style: none;
     color: #167AF6;
   }
-
 </style>
 
 <div class="container">
@@ -24,23 +23,21 @@
   <!-- row 2 -->
   <!-- 5 signature tacos -->
   <div class="row">
-    <div class="col-2">
+    <div class="col-1">
 
     </div>
     <p class="signature-taco">
       <%= render partial: 'tacos/signature', collection: @signatures %><br>
     </p>
+   <div class="col-lg-1 owntaco">
+     <h3><%= link_to "Make Your Own 🌮", new_taco_path %></h3>
+   </div>
+
   </div>
   <!-- row3 -->
   <!-- make your own taco -->
   <div class="row">
-    <div class="col-12 text-center">
-      <h3><%= link_to "Make Your Own 🌮", new_taco_path %></h3>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-12 text-center">
+    <div class="col-12 text-right">
       <h3>Your Current Order</h3>
 
       <% @user.active_tacos.each do |taco| %>
@@ -56,7 +53,7 @@
     </div>
   </div>
     <div class="row">
-        <div class="col-12 text-center">
+        <div class="col-12 text-right">
           <h3><%=link_to "Review Your Order", finalize_path(@user) %></h3>
           <h3>Total Order Cost: $<%=@user.total %></h3>
         </div>
