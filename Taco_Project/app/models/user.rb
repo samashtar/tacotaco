@@ -13,7 +13,7 @@ class User < ApplicationRecord
   validates :phone_number, length: {minimum: 10}
 
   def remove_taco(taco_id)
-    tacos.delete(taco_id)
+    tacos.delete_at(index(taco_id))
   end
 
   def total
