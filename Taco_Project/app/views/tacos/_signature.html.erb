@@ -1,5 +1,11 @@
 <div class="col-2 text-center signature_foods">
+<%  if signature.name == "The John Cena" %>
+  <a href="#" id="https://www.youtube.com/watch?v=9EPL_4HyCFQ" onclick="document.location=this.id;return false;" >
+      <%= image_tag signature.img, :size => "198x198" %>
+</a>
+  <%else%>
 <p><%= image_tag signature.img, :size => "198x198" %></p>
+<%end%>
 <p><%= signature.name %></p>
 <p>Calories: <%= signature.calories %></p>
 <p><%= signature.description %></p>
