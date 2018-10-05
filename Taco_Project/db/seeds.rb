@@ -98,28 +98,34 @@ chicken = Ingredient.find_by(name: "chicken")
 tofu = Ingredient.find_by(name: "tofu")
 beef = Ingredient.find_by(name: "beef")
 black_beans = Ingredient.find_by(name: "black")
+pinto = Ingredient.find_by(name: "pinto")
 tomato = Ingredient.find_by(name: "tomato")
 brown_rice = Ingredient.find_by(name: "brown rice")
 guacamole = Ingredient.find_by(name: "guacamole")
 medium = Ingredient.find_by(name: "medium")
 multigrain = Ingredient.find_by(name: "multigrain")
+chorizo = Ingredient.find_by(name: "chorizo")
+white_rice = Ingredient.find_by(name: "white rice")
+mild = Ingredient.find_by(name: "mild")
+white = Ingredient.find_by(name: "white")
+hot = Ingredient.find_by(name: "hot")
 
 tacoboutit =  Taco.create(
   name: "Taco 'bout it'",
-  protein: chicken.id,
-  toppings: [guacamole.id, cheese.id],
-  sauces: [medium.id],
-  bean: black_beans.id,
-  rice: brown_rice.id,
-  tortilla: multigrain.id,
+  protein: beef.id,
+  toppings: [tomato.id, cheese.id],
+  sauces: [mild.id],
+  bean: pinto.id,
+  rice: white_rice.id,
+  tortilla: white.id,
   signature: true,
   description:
   "Our cats can't stop taco'in 'bout it! Our cats also struggle with apostrophes.",
   img:"tacoboutit.jpg")
 lost_in_the_sauce = Taco.create(
   name: "Lost in the Sauce",
-  protein: chicken.id,
-  toppings: [guacamole.id, cheese.id],
+  protein: tofu.id,
+  toppings: [guacamole.id, cheese.id, tomato.id],
   sauces: [medium.id],
   bean: black_beans.id,
   rice: brown_rice.id,
@@ -129,7 +135,7 @@ lost_in_the_sauce = Taco.create(
   img:"lost_in_the_sauce.jpg")
 beanormous = Taco.create(
   name: "Beanormous",
-  protein: chicken.id,
+  protein: chorizo.id,
   toppings: [guacamole.id, cheese.id],
   sauces: [medium.id],
   bean: black_beans.id,
@@ -142,7 +148,7 @@ beanormous = Taco.create(
 cheese_louise = Taco.create(
   name: "Cheese Louise",
   protein: chicken.id,
-  toppings: [guacamole.id, cheese.id],
+  toppings: [tomato.id, cheese.id],
   sauces: [medium.id],
   bean: black_beans.id,
   rice: brown_rice.id,
@@ -152,12 +158,12 @@ cheese_louise = Taco.create(
   img:"cheese_louise.jpg")
 the_john_cena = Taco.create(
   name: "The John Cena",
-  protein: chicken.id,
-  toppings: [guacamole.id, cheese.id],
-  sauces: [medium.id],
+  protein: beef.id,
+  toppings: [guacamole.id, cheese.id, tomato.id],
+  sauces: [hot.id],
   bean: black_beans.id,
-  rice: brown_rice.id,
-  tortilla: multigrain.id,
+  rice: white_rice.id,
+  tortilla: white.id,
   signature: true,
   description: "WARNING!!! May cause you to turn into John Cena.",
   img:"johncena.jpg")

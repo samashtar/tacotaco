@@ -1,9 +1,14 @@
-<h1>Create a User</h1>
+<div class="container">
+  <br>
 
-<%= render partial: "error_list", locals: {new_object: @user} %>
+  <h1>Create a User</h1>
 
-<%= render partial: 'form', locals: {user: @user} %>
+  <%= render partial: "error_list", locals: {new_object: @user} %>
 
-<br>
+  <%= render partial: 'form', locals: {user: @user} %>
 
-<h3><%=link_to "Return to home?", '/'%></h3>
+  <br>
+
+  <h3><%=link_to "Return to home?", '/'%></h3>
+
+</div>
