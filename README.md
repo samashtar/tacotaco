@@ -12,11 +12,12 @@ Watch a demo video here:
 
 ### You can order one of our signature dishes..
 
-![alt text](Taco_Project/app/assets/images/orderyourself.png)
+![alt text](Taco_Project/app/assets/images/signature.png)
 
 ## ..or choose to make one yourself!
 
-![alt text](Taco_Project/app/assets/images/signature.png)
+![alt text](Taco_Project/app/assets/images/orderyourself.png)
 
-Coded in Ruby using Ruby on Rails, this app has full CRUD functionality and follows RESTful routing conventions.
-It also has proper session management and communicates with a SQL database through a Rails back end.
+### Coded in Ruby using Ruby on Rails, this app has full CRUD functionality and follows RESTful routing conventions.
+
+### It also has proper session management and communicates with a SQL database through a Rails back end.
